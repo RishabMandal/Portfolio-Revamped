@@ -1,7 +1,7 @@
 import { darkmode } from "./App";
 import React, { createContext, useState } from "react";
 // import moon from "./darkmodemoon.jpg";
-import moon2 from "./darkmodemoon2.jpg";
+// import moon2 from "./darkmodemoon2.jpg";
 import moon3 from "./moon3.png";
 import cross from "./cross.png";
 import menuicon from "./icons-circled-menu.png";
@@ -17,6 +17,8 @@ import Contact from "./Contact";
 import Home from "./Home";
 import About from "./About";
 import Skills from "./Skills";
+import { motion } from "framer-motion";
+
 
 export default function Navbar() {
   const [hide, setHide] = useState("hidden");
@@ -28,8 +30,8 @@ export default function Navbar() {
           return (
             <>
               <Router>
-                <header
-                  className={`${dark.Darkval} fixed w-screen body-font hidden md:block lg:block`}
+                <motion.header
+                  className={`${dark.Darkval} z-10 fixed top-0 w-screen body-font hidden md:block lg:block`}
                 >
                   <div className="container mx-auto font-Ubuntu flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <a className="flex title-font font-medium items-center mb-4 md:mb-0">
@@ -97,12 +99,12 @@ export default function Navbar() {
                   </div>
                   {/* <hr />
                   <hr /> */}
-                </header>
+                </motion.header>
 
                 {/* Smaller navbar upper part */}
 
                 <div
-                  className={`md:hidden ${dark.Darkval} fixed bg-opacity-0 bottom-3 w-full lg:hidden text-left text-2xl pt-4`}
+                  className={`md:hidden ${dark.Darkval} fixed z-10 bg-opacity-0 bottom-3 w-screen lg:hidden text-left text-2xl pt-4`}
                 >
                   <div
                     className={`${dark.Darkval} ${
@@ -147,7 +149,7 @@ export default function Navbar() {
                   {/* New Navbar at the bottom (lower part) */}
 
                   <div
-                    className={`md:hidden ${dark.Darkval} ${hide} bg-opacity-0 fixed bottom-3 w-full lg:hidden text-left text-2xl pt-4`}
+                    className={`md:hidden ${dark.Darkval} ${hide} bg-opacity-0 fixed bottom-3 w-screen lg:hidden text-left text-2xl pt-4`}
                   >
                     {/* New Navbar at the bottom  */}
                     <div

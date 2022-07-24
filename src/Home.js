@@ -4,6 +4,9 @@ import React from "react";
 // import moon from "./darkmodemoon.jpg";
 import arrow from "./arrow.png";
 import Picsart_22_03_05_min from "./Picsart_22-03-05_17-17-22-574-min.png";
+import { motion } from "framer-motion";
+// import { useInView } from "react-intersection-observer";
+// import { useEffect } from "react";
 
 export default function Home() {
   function clickfacebook() {
@@ -76,12 +79,20 @@ export default function Home() {
                 </div>
               </div>
               <div className={`${dark.Darkval} hidden md:block lg:block`}>
-                <section
+                <motion.section
+                  // initial={{ x: "-100vw" }}
+                  // transition={{ duration: 0.7 }}
+                  // animate={{ x: 0 }}
                   id="home"
                   className={`text-gray-600 body-font ${dark.Darkval}`}
                 >
                   <div className="container mx-auto flex px-5 py-20 md:flex-row flex-col items-center ">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <motion.div
+                      initial={{ x: "-100vw" }}
+                      transition={{ duration: 0.7 }}
+                      animate={{ x: 0 ,position:""}}
+                      className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+                    >
                       <h1 className="title-font font-Lobster sm:text-6xl text-6xl mb-4 mt-5 ">
                         Hey,
                         <br className="hidden lg:inline-block" />
@@ -116,16 +127,21 @@ export default function Home() {
                         />
                       </div>
                       <div className="flex justify-center"></div>
-                    </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                    </motion.div>
+                    <motion.div
+                      initial={{ x: "100vw" }}
+                      transition={{ duration: 0.7,delay:0.6}}
+                      animate={{ x: 0 }}
+                      className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+                    >
                       <img
                         className="object-cover object-center rounded mt-[3.75rem]"
                         alt="hero"
                         src={Picsart_22_03_05_min}
                       />
-                    </div>
+                    </motion.div>
                   </div>
-                </section>
+                </motion.section>
               </div>
               <hr></hr>
 

@@ -1,5 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import { darkmode } from "./App";
+// import gsap from "gsap";
+import { motion } from "framer-motion";
 import webimage from "./Webdesignimage.jpg";
 import downloadimage from "./download.png";
 
@@ -22,6 +24,7 @@ export default function About() {
       window.location.href = "https://www.instagram.com/rishab829/";
     }
   }
+
   return (
     <>
       {/*Context*/}
@@ -29,9 +32,11 @@ export default function About() {
         {(dark) => {
           return (
             <>
+              {/* The bigger laptop screen part */}
+
               <section
                 id="aboutmyself"
-                className={`text-gray-600 ${dark.Darkval} body-font font-Rampart`}
+                className={`text-gray-600 ${dark.Darkval} body-font hidden md:block lg:block font-Rampart`}
               >
                 {/* <div className="text-center m-10">
         <h1 className="title-font sm:text-4xl text-3xl mb-1 font-bold text-black underline underline-offset-[24px]">
@@ -45,7 +50,12 @@ export default function About() {
                 <div
                   className={`container ${dark.Darkval} mx-auto flex px-5 py-24 md:flex-row flex-col items-center`}
                 >
-                  <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-center md:text-left mb-16 md:mb-0 items-center text-center">
+                  <motion.div
+                    initial={{ x: "-100vw" }}
+                    transition={{ duration: 0.7 }}
+                    animate={{ x: 0 }}
+                    className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-center md:text-left mb-16 md:mb-0 items-center text-center"
+                  >
                     <hr />
                     <h1
                       className={`title-font sm:text-4xl text-3xl mb-1 font-bold font-Ubuntu ${dark.Darkval} underline underline-offset-[24px]`}
@@ -76,14 +86,89 @@ export default function About() {
                         className="w-8 h-8 my-auto mx-2"
                       />
                     </div>
-                  </div>
-                  <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                  </motion.div>
+                  <motion.div
+                    initial={{ x: "100vw" }}
+                    transition={{ duration: 0.7,delay:0.6 }}
+                    animate={{ x: 0 }}
+                    className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+                  >
                     <img
                       className="object-cover object-center rounded-xl"
                       alt="hero"
                       src={webimage}
                     />
-                  </div>
+                  </motion.div>
+                </div>
+              </section>
+
+              {/* The smaller mobile screen part */}
+
+              <section
+                id="aboutmyself"
+                className={`text-gray-600 ${dark.Darkval} md:hidden lg:hidden body-font font-Rampart`}
+              >
+                {/* <div className="text-center m-10">
+        <h1 className="title-font sm:text-4xl text-3xl mb-1 font-bold text-black underline underline-offset-[24px]">
+          About myself
+          <br className="hidden lg:inline-block" />
+        </h1>
+        <p className="mb-8 leading-relaxed text-red-600 bg-white px-2">
+          who i am
+        </p>
+      </div> */}
+                <div
+                  className={`container ${dark.Darkval} mx-auto flex px-5 py-24 md:flex-row flex-col items-center`}
+                >
+                  <motion.div
+                    initial={{ x: "-100vw" }}
+                    transition={{ duration: 0.7 }}
+                    animate={{ x: 0 }}
+                    className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-center md:text-left mb-16 md:mb-0 items-center text-center"
+                  >
+                    <hr />
+                    <h1
+                      className={`title-font sm:text-4xl text-3xl mb-1 font-bold font-Ubuntu ${dark.Darkval} underline underline-offset-[24px]`}
+                    >
+                      About myself
+                      <br className="hidden lg:inline-block" />
+                    </h1>
+                    <p
+                      className={`mb-8 font-Ubuntu leading-relaxed text-red-600 ${
+                        dark.Darkval === "bg-white text-black"
+                          ? "bg-white"
+                          : "bg-black"
+                      } px-2`}
+                    >
+                      who i am
+                    </p>
+                    <p className="mb-8 leading-relaxed">
+                      Rishab Mandal, that's me. Born in Mumbai, I am a
+                      Full-Stack web developer and a UI/UX designer.
+                    </p>
+                    <div className="flex justify-center">
+                      <button className="inline-flex font-Ubuntu text-white bg-red-700 animate-bouncy hover:animate-none border-4 border-red-700 py-2 px-6 focus:outline-none hover:bg-white hover:text-red-600 hover:border-4 hover:border-red-600 hover:rounded-xl rounded-xl">
+                        Download CV
+                      </button>
+                      <img
+                        src={downloadimage}
+                        alt=""
+                        className="w-8 h-8 my-auto mx-2"
+                      />
+                    </div>
+                  </motion.div>
+                  <motion.div
+                    // initial={{ x: "100vw" }}
+                    // transition={{ duration: 0.7,delay:1 }}
+                    // animate={{ x: 0,zIndex:0 }}
+                    className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+                  >
+                    <img
+                      className="object-cover object-center rounded-xl"
+                      alt="hero"
+                      src={webimage}
+                    />
+                  </motion.div>
                 </div>
               </section>
               <hr />

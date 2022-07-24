@@ -46,7 +46,8 @@ function App() {
   }, []);
 
   // Dark Mode
-  const [Darkval, setdarkval] = useState("bg-white text-black"); // Context
+  // const [Darkval, setdarkval] = useState("bg-white text-black"); // Context
+  const [Darkval, setdarkval] = useState("bg-black text-white"); // Context
 
   return (
     <>
