@@ -76,8 +76,7 @@ export default function Skills() {
                   </div>
                 </div>
               </section>
-              <hr />
-
+              {/* <hr /> */}
               {/* Languages section  */}
               <section
                 className={`text-gray-600 ${dark.Darkval} body-font font-Rampart `}
@@ -100,17 +99,15 @@ export default function Skills() {
                   </div>
                 </div>
               </section>
-              <hr></hr>
-
+              {/* <hr></hr> */}
               {/* New Section  */}
-
               {/* Photos section start (These are the technologies I know) */}
               <div
-                className={`flex flex-col ${dark.Darkval} py-16 md:pb-0 lg:pb-0 items-center text-center`}
+                className={`flex flex-col ${dark.Darkval} pt-16 items-center text-center`}
               >
-                <hr />
+                {/* <hr /> */}
                 <h1
-                  className={`title-font sm:text-4xl text-3xl mb-1 font-bold font-Ubuntu ${dark.Darkval} underline underline-offset-[24px]`}
+                  className={`title-font sm:text-4xl text-3xl font-bold font-Ubuntu ${dark.Darkval} underline underline-offset-[24px]`}
                 >
                   My Soft Skills
                   <br className="hidden lg:inline-block" />
@@ -125,87 +122,88 @@ export default function Skills() {
                   what i know
                 </p>
               </div>
+              {/* new start */}{" "}
+              <div>
+                <div name="skills" className={`w-full pb-56 ${dark.Darkval} `}>
+                  {/* Container */}
+                  <div className="max-w-[1000px] mx-auto py-4 pb-4 flex flex-col justify-center w-full h-full">
+                    <div>
+                      <p className="py-4 pl-4 text-red-600">
+                        // These are the technologies I know
+                      </p>
+                    </div>
 
-              {/* new start */}
-              <div
-                name="skills"
-                className={`w-full pb-56 h-screen ${dark.Darkval} `}
-              >
-                {/* Container */}
-                <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-                  <div>
-                    <p className="py-4">// These are the technologies I know</p>
-                  </div>
-
-                  <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
-                    <div className="  hover:scale-110 duration-500">
-                      <img
-                        className="w-20 mx-auto"
-                        src={HTML}
-                        alt="HTML icon"
-                      />
-                      <p className="my-4">HTML</p>
-                    </div>
-                    <div className="  hover:scale-110 duration-500">
-                      <img className="w-20 mx-auto" src={CSS} alt="HTML icon" />
-                      <p className="my-4">CSS</p>
-                    </div>
-                    <div className="  hover:scale-110 duration-500">
-                      <img
-                        className="w-20 mx-auto"
-                        src={JavaScript}
-                        alt="HTML icon"
-                      />
-                      <p className="my-4">JAVASCRIPT</p>
-                    </div>
-                    <div className="  hover:scale-110 duration-500">
-                      <img
-                        className="w-20 mx-auto"
-                        src={ReactImg}
-                        alt="HTML icon"
-                      />
-                      <p className="my-4">REACT</p>
-                    </div>
-                    <div className="  hover:scale-110 duration-500">
-                      <img
-                        className="w-20 mx-auto"
-                        src={GitHub}
-                        alt="HTML icon"
-                      />
-                      <p className="my-4">GITHUB</p>
-                    </div>
-                    <div className="  hover:scale-110 duration-500">
-                      <img
-                        className="w-20 mx-auto"
-                        src={Node}
-                        alt="HTML icon"
-                      />
-                      <p className="my-4">NODE JS</p>
-                    </div>
-                    <div className="  hover:scale-110 duration-500">
-                      <img
-                        className="w-20 mx-auto"
-                        src={Mongo}
-                        alt="HTML icon"
-                      />
-                      <p className="my-4">MONGO DB</p>
-                    </div>
-                    <div className="  hover:scale-110 duration-500">
-                      <img
-                        className="w-20 mx-auto"
-                        src={Tailwind}
-                        alt="HTML icon"
-                      />
-                      <p className="my-4">TAILWIND</p>
+                    <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
+                      <div className="  hover:scale-110 duration-500">
+                        <img
+                          className="w-20 mx-auto"
+                          src={HTML}
+                          alt="HTML icon"
+                        />
+                        <p className="my-4">HTML</p>
+                      </div>
+                      <div className="  hover:scale-110 duration-500">
+                        <img
+                          className="w-20 mx-auto"
+                          src={CSS}
+                          alt="HTML icon"
+                        />
+                        <p className="my-4">CSS</p>
+                      </div>
+                      <div className="  hover:scale-110 duration-500">
+                        <img
+                          className="w-20 mx-auto"
+                          src={JavaScript}
+                          alt="HTML icon"
+                        />
+                        <p className="my-4">JAVASCRIPT</p>
+                      </div>
+                      <div className="  hover:scale-110 duration-500">
+                        <img
+                          className="w-20 mx-auto"
+                          src={ReactImg}
+                          alt="HTML icon"
+                        />
+                        <p className="my-4">REACT</p>
+                      </div>
+                      <div className="  hover:scale-110 duration-500">
+                        <img
+                          className="w-20 mx-auto"
+                          src={GitHub}
+                          alt="HTML icon"
+                        />
+                        <p className="my-4">GITHUB</p>
+                      </div>
+                      <div className="  hover:scale-110 duration-500">
+                        <img
+                          className="w-20 mx-auto"
+                          src={Node}
+                          alt="HTML icon"
+                        />
+                        <p className="my-4">NODE JS</p>
+                      </div>
+                      <div className="  hover:scale-110 duration-500">
+                        <img
+                          className="w-20 mx-auto"
+                          src={Mongo}
+                          alt="HTML icon"
+                        />
+                        <p className="my-4">MONGO DB</p>
+                      </div>
+                      <div className="  hover:scale-110 duration-500">
+                        <img
+                          className="w-20 mx-auto"
+                          src={Tailwind}
+                          alt="HTML icon"
+                        />
+                        <p className="my-4">TAILWIND</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
               {/* End of photos section */}
-
               {/* FOOTER Section  */}
-
               <footer className="text-gray-600 bg-red-600 body-font">
                 <div className="bg-black pb-20 md:pb-0 lg:pb-0">
                   <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
