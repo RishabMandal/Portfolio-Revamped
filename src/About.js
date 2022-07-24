@@ -77,7 +77,13 @@ export default function About() {
                       Full-Stack web developer and a UI/UX designer.
                     </p>
                     <div className="flex justify-center">
-                      <button className="inline-flex font-Ubuntu text-white bg-red-700 animate-bouncy hover:animate-none border-4 border-red-700 py-2 px-6 focus:outline-none hover:bg-white hover:text-red-600 hover:border-4 hover:border-red-600 hover:rounded-xl rounded-xl">
+                      <button
+                        className={`inline-flex ${
+                          dark.Darkval === "bg-white text-black"
+                            ? "hover:bg-white"
+                            : "hover:bg-black"
+                        } font-Ubuntu text-white hover:shadow-xl hover:shadow-red-600/40 bg-red-700 animate-bouncy hover:animate-none border-4 border-red-700 py-2 px-6 focus:outline-none hover:text-red-600 hover:border-4 hover:border-red-600 hover:rounded-xl rounded-xl`}
+                      >
                         Download CV
                       </button>
                       <img
@@ -89,7 +95,7 @@ export default function About() {
                   </motion.div>
                   <motion.div
                     initial={{ x: "100vw" }}
-                    transition={{ duration: 0.7,delay:0.6 }}
+                    transition={{ duration: 0.7, delay: 0.6 }}
                     animate={{ x: 0 }}
                     className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
                   >
@@ -144,10 +150,16 @@ export default function About() {
                     </p>
                     <p className="mb-8 leading-relaxed">
                       Rishab Mandal, that's me. Born in Mumbai, I am a
-                      Full-Stack web developer and a UI/UX designer.
+                      Full-Stack Web developer and a UI/UX designer.
                     </p>
                     <div className="flex justify-center">
-                      <button className="inline-flex font-Ubuntu text-white bg-red-700 animate-bouncy hover:animate-none border-4 border-red-700 py-2 px-6 focus:outline-none hover:bg-white hover:text-red-600 hover:border-4 hover:border-red-600 hover:rounded-xl rounded-xl">
+                      <button
+                        className={`inline-flex ${
+                          dark.Darkval === "bg-white text-black"
+                            ? "hover:bg-white"
+                            : "hover:bg-black"
+                        } font-Ubuntu text-white hover:shadow-xl hover:shadow-red-600/40 bg-red-700 animate-bouncy hover:animate-none border-4 border-red-700 py-2 px-6 focus:outline-none hover:text-red-600 hover:border-4 hover:border-red-600 hover:rounded-xl rounded-xl`}
+                      >
                         Download CV
                       </button>
                       <img
