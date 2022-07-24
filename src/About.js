@@ -33,7 +33,6 @@ export default function About() {
           return (
             <>
               {/* The bigger laptop screen part */}
-
               <section
                 id="aboutmyself"
                 className={`text-gray-600 ${dark.Darkval} body-font hidden md:block lg:block font-Rampart`}
@@ -107,9 +106,7 @@ export default function About() {
                   </motion.div>
                 </div>
               </section>
-
               {/* The smaller mobile screen part */}
-
               <section
                 id="aboutmyself"
                 className={`text-gray-600 ${dark.Darkval} md:hidden lg:hidden body-font font-Rampart`}
@@ -184,9 +181,8 @@ export default function About() {
                 </div>
               </section>
               <hr />
-
+              
               {/* FOOTER Section  */}
-
               <footer className="text-gray-600 bg-red-600 body-font">
                 <div className="bg-black pb-20 md:pb-0 lg:pb-0">
                   <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">

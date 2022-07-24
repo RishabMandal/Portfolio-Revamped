@@ -1,26 +1,37 @@
 import { darkmode } from "./App";
 import React from "react";
 import languageimage from "./languageimage.jpg";
+// From here starts new portion
+import HTML from "./html.png";
+import CSS from "./css.png";
+import JavaScript from "./javascript.png";
+import ReactImg from "./react.png";
+import Node from "./node.png";
+// import FireBase from './firebase.png';
+// import AWS from './aws.png';
+import GitHub from "./github.png";
+import Tailwind from "./tailwind.png";
+import Mongo from "./mongo.png";
 
 export default function Skills() {
-    function clickfacebook() {
-        console.log("clicked");
-        if (window.confirm("Proceed to facebook ? ")) {
-          window.location.href = "https://www.facebook.com/rishab.mandal.1048";
-        }
-      }
-      function clickinsta() {
-        console.log("clicked");
-        if (window.confirm("Proceed to Instagram ? ")) {
-          window.location.href = "https://www.instagram.com/rishab829/";
-        }
-      }
-      function clicklinkedin() {
-        console.log("clicked");
-        if (window.confirm("Proceed to Linkedin ? ")) {
-          window.location.href = "https://www.instagram.com/rishab829/";
-        }
-      }
+  function clickfacebook() {
+    console.log("clicked");
+    if (window.confirm("Proceed to facebook ? ")) {
+      window.location.href = "https://www.facebook.com/rishab.mandal.1048";
+    }
+  }
+  function clickinsta() {
+    console.log("clicked");
+    if (window.confirm("Proceed to Instagram ? ")) {
+      window.location.href = "https://www.instagram.com/rishab829/";
+    }
+  }
+  function clicklinkedin() {
+    console.log("clicked");
+    if (window.confirm("Proceed to Linkedin ? ")) {
+      window.location.href = "https://www.instagram.com/rishab829/";
+    }
+  }
   return (
     <>
       {/*Context*/}
@@ -28,7 +39,10 @@ export default function Skills() {
         {(dark) => {
           return (
             <>
-              <section id="Skills" className={`text-gray-600 body-font ${dark.Darkval}`}>
+              <section
+                id="Skills"
+                className={`text-gray-600 body-font ${dark.Darkval}`}
+              >
                 <div className="container px-5 py-24 mx-auto flex flex-wrap">
                   <h2 className="sm:text-4xl font-bold font-Ubuntu mt-10 text-3xl mb-2 md:w-2/5 font-Rampart ">
                     My Soft Skills
@@ -37,7 +51,8 @@ export default function Skills() {
                     <p className="leading-relaxed text-base">
                       Website and webpage development, Basic android application
                       development through Android Studio, Video editing,
-                      Photoshop and photo editing, Node JS, Express JS, MongoDB.
+                      Photoshop and photo editing, React JS, Node JS, Express
+                      JS, MongoDB.
                     </p>
                     <div className="flex md:mt-4 mt-6">
                       <a className="text-red-600 inline-flex items-center cursor-pointer ">
@@ -64,7 +79,9 @@ export default function Skills() {
               <hr />
 
               {/* Languages section  */}
-              <section className={`text-gray-600 ${dark.Darkval} body-font font-Rampart `}>
+              <section
+                className={`text-gray-600 ${dark.Darkval} body-font font-Rampart `}
+              >
                 <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                   <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                     <img
@@ -84,6 +101,108 @@ export default function Skills() {
                 </div>
               </section>
               <hr></hr>
+
+              {/* New Section  */}
+
+              {/* Photos section start (These are the technologies I know) */}
+              <div
+                className={`flex flex-col ${dark.Darkval} py-16 md:pb-0 lg:pb-0 items-center text-center`}
+              >
+                <hr />
+                <h1
+                  className={`title-font sm:text-4xl text-3xl mb-1 font-bold font-Ubuntu ${dark.Darkval} underline underline-offset-[24px]`}
+                >
+                  My Soft Skills
+                  <br className="hidden lg:inline-block" />
+                </h1>
+                <p
+                  className={`md:mb-8 lg:mb-8 mb-20 font-Ubuntu leading-relaxed text-red-600 ${
+                    dark.Darkval === "bg-white text-black"
+                      ? "bg-white"
+                      : "bg-black"
+                  } px-2`}
+                >
+                  what i know
+                </p>
+              </div>
+
+              {/* new start */}
+              <div
+                name="skills"
+                className={`w-full pb-56 h-screen ${dark.Darkval} `}
+              >
+                {/* Container */}
+                <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+                  <div>
+                    <p className="py-4">// These are the technologies I know</p>
+                  </div>
+
+                  <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
+                    <div className="  hover:scale-110 duration-500">
+                      <img
+                        className="w-20 mx-auto"
+                        src={HTML}
+                        alt="HTML icon"
+                      />
+                      <p className="my-4">HTML</p>
+                    </div>
+                    <div className="  hover:scale-110 duration-500">
+                      <img className="w-20 mx-auto" src={CSS} alt="HTML icon" />
+                      <p className="my-4">CSS</p>
+                    </div>
+                    <div className="  hover:scale-110 duration-500">
+                      <img
+                        className="w-20 mx-auto"
+                        src={JavaScript}
+                        alt="HTML icon"
+                      />
+                      <p className="my-4">JAVASCRIPT</p>
+                    </div>
+                    <div className="  hover:scale-110 duration-500">
+                      <img
+                        className="w-20 mx-auto"
+                        src={ReactImg}
+                        alt="HTML icon"
+                      />
+                      <p className="my-4">REACT</p>
+                    </div>
+                    <div className="  hover:scale-110 duration-500">
+                      <img
+                        className="w-20 mx-auto"
+                        src={GitHub}
+                        alt="HTML icon"
+                      />
+                      <p className="my-4">GITHUB</p>
+                    </div>
+                    <div className="  hover:scale-110 duration-500">
+                      <img
+                        className="w-20 mx-auto"
+                        src={Node}
+                        alt="HTML icon"
+                      />
+                      <p className="my-4">NODE JS</p>
+                    </div>
+                    <div className="  hover:scale-110 duration-500">
+                      <img
+                        className="w-20 mx-auto"
+                        src={Mongo}
+                        alt="HTML icon"
+                      />
+                      <p className="my-4">MONGO DB</p>
+                    </div>
+                    <div className="  hover:scale-110 duration-500">
+                      <img
+                        className="w-20 mx-auto"
+                        src={Tailwind}
+                        alt="HTML icon"
+                      />
+                      <p className="my-4">TAILWIND</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* End of photos section */}
 
               {/* FOOTER Section  */}
 
