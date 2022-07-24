@@ -113,7 +113,7 @@ export default function Skills() {
                   <br className="hidden lg:inline-block" />
                 </h1>
                 <p
-                  className={`md:mb-8 lg:mb-8 mb-20 font-Ubuntu leading-relaxed text-red-600 ${
+                  className={`mt-[0.20rem] md:mb-8 lg:mb-8 mb-20 font-Ubuntu leading-relaxed text-red-600 ${
                     dark.Darkval === "bg-white text-black"
                       ? "bg-white"
                       : "bg-black"
