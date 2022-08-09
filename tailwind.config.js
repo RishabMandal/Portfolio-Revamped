@@ -9,5 +9,5 @@ module.exports = {
       'Ubuntu': ['Ubuntu', 'sans-serif'] 
     },},
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

@@ -180,8 +180,48 @@ export default function About() {
                   </motion.div>
                 </div>
               </section>
-              <hr />
+
+              {/* Try  */}
+              {/* QUALIFICATION  */}
+              <div
+                className={` ${dark.Darkval} w-screen text-center px-5 py-24 items-center`}
+              >
+                {/* <h1
+                  className={`title-font sm:text-4xl text-3xl mx-auto font-bold font-Ubuntu ${dark.Darkval} underline underline-offset-[24px]`}
+                >
+                  Qualification
+                  <br className="hidden lg:inline-block" />
+                </h1> */}
+                <h1
+                  className={`title-font sm:text-4xl text-3xl my-10 mx-auto font-bold font-Ubuntu ${dark.Darkval}`}
+                >
+                  Qualification
+                  <br className="hidden lg:inline-block" />
+                </h1>
+                {/* <p
+                  className={`mt-[0.20rem] md:mb-8 lg:mb-8 mb-20 font-Ubuntu leading-relaxed text-red-600 ${
+                    dark.Darkval === "bg-white text-black"
+                      ? "bg-white"
+                      : "bg-black"
+                  } px-2`}
+                >
+                  what i know
+                </p> */}
+                <ul class="steps steps-vertical">
+                  {/* <li class="step step-primary">Register</li>
+                  <li class="step step-primary">Choose plan</li> */}
+                  {/* <li class="step step-success">Purchase</li> */}
+                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3"> BE in Computer Engineering <br />Thadomal Shahani Engineering College</div></li>
+                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3"> HSC <br />Swami Vivekanand Junior College</div></li>
+                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3"> SSC <br />St. Sebastian's High School</div></li>
+                </ul>
+              </div>
+              {/* // */}
               
+              {/* // */}
+
+              <hr />
+
               {/* FOOTER Section  */}
               <footer className="text-gray-600 bg-red-600 body-font">
                 <div className="bg-black pb-20 md:pb-0 lg:pb-0">

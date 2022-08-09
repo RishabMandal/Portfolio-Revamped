@@ -8,7 +8,7 @@ import Portfolio from "./Portfolio";
 import Qualification from "./Qualification";
 import Skills from "./Skills";
 
-const darkmode = createContext();
+const darkmode = createContext(); 
 
 function App() {
   useEffect(() => {
