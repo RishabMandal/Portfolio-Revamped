@@ -211,9 +211,9 @@ export default function About() {
                   {/* <li class="step step-primary">Register</li>
                   <li class="step step-primary">Choose plan</li> */}
                   {/* <li class="step step-success">Purchase</li> */}
-                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3"> BE in Computer Engineering <br />Thadomal Shahani Engineering College</div></li>
-                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3"> HSC <br />Swami Vivekanand Junior College</div></li>
-                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3"> SSC <br />St. Sebastian's High School</div></li>
+                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3 hover:scale-105 duration-500"> BE in Computer Engineering <br />Thadomal Shahani Engineering College</div></li>
+                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3 hover:scale-105 duration-500"> HSC <br />Swami Vivekanand Junior College</div></li>
+                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3 hover:scale-105 duration-500"> SSC <br />St. Sebastian's High School</div></li>
                 </ul>
               </div>
               {/* // */}

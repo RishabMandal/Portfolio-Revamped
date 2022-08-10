@@ -35,9 +35,12 @@ export default function Navbar() {
                 >
                   <div className="container mx-auto font-Ubuntu flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <a className="flex title-font font-medium items-center mb-4 md:mb-0">
-                      <span className="ml-[-15px] font-bold text-xl text-red-700">
+                      <motion.span 
+                      whileHover={{ scale: 1.3 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      className="ml-[-15px] font-bold text-xl text-red-700">
                         Portfolio
-                      </span>
+                      </motion.span>
                     </a>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
                       <NavLink
@@ -81,9 +84,13 @@ export default function Navbar() {
                         Contact me
                       </NavLink>
                     </nav>
-                    <button className="inline-flex items-center px-3 focus:outline-none rounded text-base md:mt-0">
+                    <motion.button className="inline-flex items-center px-3 focus:outline-none rounded text-base md:mt-0">
                       {/* Dark Mode */}
-                      <img
+                      
+    
+                      <motion.img
+                        whileHover={{ scale: 1.2 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
                         src={moon3}
                         alt=""
                         className="w-6"
@@ -95,7 +102,7 @@ export default function Navbar() {
                           }
                         }}
                       />
-                    </button>
+                    </motion.button>
                   </div>
                   {/* <hr />
                   <hr /> */}

@@ -67,6 +67,10 @@ export default function Home() {
                 </p>
                 <div className="flex">
                   <button
+                    onClick={() => {
+                      window.location.href =
+                        "https://rishabmandal.github.io/Portfolio-Revamped/#/Contact";
+                    }}
                     className={`bg-red-600 ml-8 my-8 hover:shadow-xl hover:shadow-red-600/40 hover:text-red-600 text-white border-2 ${
                       dark.Darkval === "bg-white text-black"
                         ? "hover:bg-white"
@@ -112,6 +116,10 @@ export default function Home() {
                       </p>
                       <div className="flex">
                         <button
+                          onClick={() => {
+                            window.location.href =
+                              "https://rishabmandal.github.io/Portfolio-Revamped/#/Contact";
+                          }}
                           className={`inline font-Ubuntu text-white ${
                             dark.Darkval === "bg-white text-black"
                               ? "hover:bg-white"
