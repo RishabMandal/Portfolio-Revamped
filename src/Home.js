@@ -7,6 +7,7 @@ import Picsart_22_03_05_min from "./Picsart_22-03-05_17-17-22-574-min.png";
 import { motion } from "framer-motion";
 // import { useInView } from "react-intersection-observer";
 // import { useEffect } from "react";
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
   function clickfacebook() {
@@ -58,8 +59,35 @@ export default function Home() {
                 <div className=" text-2xl font-Ubuntu text-red-600 pl-8 mt-8">
                   Rishab Mandal
                 </div>
-                <div className="text-2xl font-Ubuntu pl-8 mt-1 mb-8">
-                  Web Developer
+                <div className="text-2xl font-Ubuntu flex pl-8 mt-1 mb-8">
+                  {/* Web Developer */}
+                  I am a 
+                        {/* <div className="inline ml-2 text-red-600">Web Developer</div> */}
+                        <div className="inline ml-2 text-red-600">
+                        <Typewriter
+                        // className="text-red-600"
+                        onInit={(typewriter)=>{
+                          typewriter
+                          .typeString("Web Developer")
+                          .pauseFor(2000)
+                          .deleteAll()
+                          .typeString("Programmer")
+                          .pauseFor(2000)
+                          .deleteAll()
+                          .typeString("Your Buddy :) ")
+                          .pauseFor(2000)
+                          .deleteAll()
+                          .typeString("CSE Student")
+                          .pauseFor(2000)
+                          .deleteAll()
+                          .typeString("Active Learner")
+                          .pauseFor(2000)
+                          .deleteAll()
+                          .typeString("Web Developer")
+                          .pauseFor(2000)
+                          .start()
+                        }}
+                        /></div>
                 </div>
                 <p className="font-Ubuntu px-8">
                   Creating beautiful things, <br /> And this is what I love to
@@ -109,8 +137,35 @@ export default function Home() {
                         I'am Rishab
                         <br className="hidden lg:inline-block" />
                       </h1>
-                      <div className="text-3xl font-Ubuntu mt-5 mb-8">
-                        Web Developer
+                      <div className="text-3xl flex font-Ubuntu mt-5 mb-8">
+                        {/* I am a Web Developer */}
+                        I am a 
+                        {/* <div className="inline ml-2 text-red-600">Web Developer</div> */}
+                        <div className="inline ml-2 text-red-600">
+                        <Typewriter
+                        // className="text-red-600"
+                        onInit={(typewriter)=>{
+                          typewriter
+                          .typeString("Web Developer")
+                          .pauseFor(2000)
+                          .deleteAll()
+                          .typeString("Programmer")
+                          .pauseFor(2000)
+                          .deleteAll()
+                          .typeString("Your Buddy :) ")
+                          .pauseFor(2000)
+                          .deleteAll()
+                          .typeString("CSE Student")
+                          .pauseFor(2000)
+                          .deleteAll()
+                          .typeString("Active Learner")
+                          .pauseFor(2000)
+                          .deleteAll()
+                          .typeString("Web Developer")
+                          .pauseFor(2000)
+                          .start()
+                        }}
+                        /></div>
                       </div>
                       <p className="mt-4 font-Ubuntu leading-relaxed text-2xl text-red-700">
                         Creating beautiful things,
