@@ -1,9 +1,10 @@
 import React, { useContext, useRef, useEffect } from "react";
 import { darkmode } from "./App";
 // import gsap from "gsap";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import webimage from "./Webdesignimage.jpg";
 import downloadimage from "./download.png";
+import { useInView } from "react-intersection-observer";
 
 export default function About() {
   function clickfacebook() {
@@ -24,6 +25,24 @@ export default function About() {
       window.location.href = "https://www.instagram.com/rishab829/";
     }
   }
+
+  // Animation while scrolling
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: { type: "spring" },
+      });
+    }
+    if (!inView) {
+      animation.start({
+        x: "-100vw",
+        transition: { type: "spring" },
+      });
+    }
+  }, [inView]);
 
   return (
     <>
@@ -51,7 +70,7 @@ export default function About() {
                 >
                   <motion.div
                     initial={{ x: "-100vw" }}
-                    transition={{ duration: 0.7 }}
+                    transition={{ duration: 0.7, type: "spring", bounce: 0.3 }}
                     animate={{ x: 0 }}
                     className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-center md:text-left mb-16 md:mb-0 items-center text-center"
                   >
@@ -94,7 +113,12 @@ export default function About() {
                   </motion.div>
                   <motion.div
                     initial={{ x: "100vw" }}
-                    transition={{ duration: 0.7, delay: 0.6 }}
+                    transition={{
+                      duration: 0.7,
+                      delay: 0.6,
+                      type: "spring",
+                      bounce: 0.3,
+                    }}
                     animate={{ x: 0 }}
                     className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
                   >
@@ -125,7 +149,7 @@ export default function About() {
                 >
                   <motion.div
                     initial={{ x: "-100vw" }}
-                    transition={{ duration: 0.7 }}
+                    transition={{ duration: 0.7, type: "spring", bounce: 0.3 }}
                     animate={{ x: 0 }}
                     className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-center md:text-left mb-16 md:mb-0 items-center text-center"
                   >
@@ -183,7 +207,12 @@ export default function About() {
 
               {/* Try  */}
               {/* QUALIFICATION  */}
-              <div
+              <div className={`${dark.Darkval}`}>
+              <motion.div
+                ref={ref}
+                // initial={{ x: "-100vw" }}
+                // animate={{ x: 0 }}
+                animate={animation}
                 className={` ${dark.Darkval} w-screen text-center px-5 py-24 items-center`}
               >
                 {/* <h1
@@ -211,13 +240,31 @@ export default function About() {
                   {/* <li class="step step-primary">Register</li>
                   <li class="step step-primary">Choose plan</li> */}
                   {/* <li class="step step-success">Purchase</li> */}
-                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3 hover:scale-105 duration-500"> BE in Computer Engineering <br />Thadomal Shahani Engineering College</div></li>
-                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3 hover:scale-105 duration-500"> HSC <br />Swami Vivekanand Junior College</div></li>
-                  <li class="step step-error text-red-600 text-left text-xl my-2"><div className="text-left mx-3 hover:scale-105 duration-500"> SSC <br />St. Sebastian's High School</div></li>
+                  <li class="step step-error text-red-600 text-left text-xl my-2">
+                    <div className="text-left mx-3 hover:scale-105 duration-500">
+                      {" "}
+                      BE in Computer Engineering <br />
+                      Thadomal Shahani Engineering College
+                    </div>
+                  </li>
+                  <li class="step step-error text-red-600 text-left text-xl my-2">
+                    <div className="text-left mx-3 hover:scale-105 duration-500">
+                      {" "}
+                      HSC <br />
+                      Swami Vivekanand Junior College
+                    </div>
+                  </li>
+                  <li class="step step-error text-red-600 text-left text-xl my-2">
+                    <div className="text-left mx-3 hover:scale-105 duration-500">
+                      {" "}
+                      SSC <br />
+                      St. Sebastian's High School
+                    </div>
+                  </li>
                 </ul>
-              </div>
+              </motion.div></div>
               {/* // */}
-              
+
               {/* // */}
 
               <hr />
