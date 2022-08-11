@@ -7,8 +7,9 @@ import Navbar from "./Navbar";
 import Portfolio from "./Portfolio";
 import Qualification from "./Qualification";
 import Skills from "./Skills";
+import { Audio, Puff } from "react-loader-spinner";
 
-const darkmode = createContext(); 
+const darkmode = createContext();
 
 function App() {
   useEffect(() => {
@@ -49,11 +50,36 @@ function App() {
   // const [Darkval, setdarkval] = useState("bg-white text-black"); // Context
   const [Darkval, setdarkval] = useState("bg-black text-white"); // Context
 
+  const [loadingscreen, setLoadingscreen] = useState("h-[100vh]");
+  const [contentscreen, setContentscreen] = useState("hidden");
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadingscreen("hidden");
+      setContentscreen("");
+    }, 2000);
+  
+  }, [])
+  
+
   return (
     <>
+      <div className={`${loadingscreen} justify-end py-20 bg-black`}>
+        <div className="block mx-[30vw] md:mx-[45vw] mt-[30vh]">
+          <Puff
+            height="180"
+            width="180"
+            radius="9"
+            color="red"
+            ariaLabel="three-dots-loading"
+            // wrapperStyle
+            // wrapperClass
+          />
+        </div>
+      </div>
+
       <darkmode.Provider value={{ Darkval, setdarkval }}>
         {/*Context*/}
-        <div className="">
+        <div className={`${contentscreen}`}>
           <Navbar />
         </div>
         {/* <div>

@@ -110,7 +110,7 @@ export default function Home() {
                   <img src={arrow} alt="" className="h-5 w-5 my-auto mx-1" />
                 </div>
               </div>
-              <div className={`${dark.Darkval} hidden md:block lg:block`}>
+              <div className={`${dark.Darkval} h-[100vh] hidden md:block lg:block`}>
                 <motion.section
                   // initial={{ x: "-100vw" }}
                   // transition={{ duration: 0.7 }}
