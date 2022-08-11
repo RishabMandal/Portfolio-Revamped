@@ -1,6 +1,7 @@
 import { darkmode } from "./App";
-import React from "react";
+import React, { useEffect } from "react";
 import languageimage from "./languageimage.jpg";
+import projectimage1 from "./Picsart_22-08-10_21-49-15-590.png";
 // From here starts new portion
 import HTML from "./html.png";
 import CSS from "./css.png";
@@ -12,6 +13,8 @@ import Node from "./node.png";
 import GitHub from "./github.png";
 import Tailwind from "./tailwind.png";
 import Mongo from "./mongo.png";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Skills() {
   function clickfacebook() {
@@ -32,6 +35,25 @@ export default function Skills() {
       window.location.href = "https://www.instagram.com/rishab829/";
     }
   }
+
+  // Animation while scrolling
+  const { ref, inView } = useInView();
+  const animation = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: { type: "spring" },
+      });
+    }
+    if (!inView) {
+      animation.start({
+        x: "-100vw",
+        transition: { type: "spring" },
+      });
+    }
+  }, [inView]);
+
   return (
     <>
       {/*Context*/}
@@ -202,6 +224,59 @@ export default function Skills() {
                   </div>
                 </div>
               </div>
+              {/* // */}
+              {/* // */}
+              {/* // */}
+              <div
+                className={`flex flex-col ${dark.Darkval} items-center text-center`}
+              >
+                {/* <hr /> */}
+                <h1
+                  className={`title-font sm:text-4xl text-3xl font-bold font-Ubuntu ${dark.Darkval} underline underline-offset-[24px]`}
+                >
+                  Projects
+                  <br className="hidden lg:inline-block" />
+                </h1>
+                <p
+                  className={`mt-[0.20rem] md:mb-8 lg:mb-8 mb-20 font-Ubuntu leading-relaxed text-red-600 ${
+                    dark.Darkval === "bg-white text-black"
+                      ? "bg-white"
+                      : "bg-black"
+                  } px-2`}
+                >
+                  my work
+                </p>
+              </div>
+              <motion.section
+                className={`text-gray-600 ${dark.Darkval} body-font font-Rampart `}
+              >
+                <motion.div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                  <motion.div
+                    ref={ref}
+                    // Try to rectify this animation
+                    // animate={animation}
+                    className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
+                  >
+                    <img
+                      onClick={() => {
+                        window.location.href =
+                          "https://rishabmandal.github.io/Login-Page/";
+                      }}
+                      className="object-cover object-center rounded-xl cursor-pointer"
+                      alt="hero"
+                      src={projectimage1}
+                    />
+                  </motion.div>
+                  <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                    <h1 className="font-Ubuntu sm:text-4xl text-3xl mb-4 text-red-600">
+                      Login and Register Page
+                    </h1>
+                    <p className="mb-8 mt-2 leading-relaxed ">
+                      Made with HTML, CSS & Javascript, React JS.
+                    </p>
+                  </div>
+                </motion.div>
+              </motion.section>
               {/* End of photos section */}
               {/* FOOTER Section  */}
               <footer className="text-gray-600 bg-red-600 body-font">

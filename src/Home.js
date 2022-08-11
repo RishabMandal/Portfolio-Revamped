@@ -60,14 +60,13 @@ export default function Home() {
                   Rishab Mandal
                 </div>
                 <div className="text-2xl font-Ubuntu flex pl-8 mt-1 mb-8">
-                  {/* Web Developer */}
-                  I am a 
-                        {/* <div className="inline ml-2 text-red-600">Web Developer</div> */}
-                        <div className="inline ml-2 text-red-600">
-                        <Typewriter
-                        // className="text-red-600"
-                        onInit={(typewriter)=>{
-                          typewriter
+                  {/* Web Developer */}I am a
+                  {/* <div className="inline ml-2 text-red-600">Web Developer</div> */}
+                  <div className="inline ml-2 text-red-600">
+                    <Typewriter
+                      // className="text-red-600"
+                      onInit={(typewriter) => {
+                        typewriter
                           .typeString("Web Developer")
                           .pauseFor(2000)
                           .deleteAll()
@@ -85,9 +84,10 @@ export default function Home() {
                           .deleteAll()
                           .typeString("Web Developer")
                           .pauseFor(2000)
-                          .start()
-                        }}
-                        /></div>
+                          .start();
+                      }}
+                    />
+                  </div>
                 </div>
                 <p className="font-Ubuntu px-8">
                   Creating beautiful things, <br /> And this is what I love to
@@ -138,34 +138,34 @@ export default function Home() {
                         <br className="hidden lg:inline-block" />
                       </h1>
                       <div className="text-3xl flex font-Ubuntu mt-5 mb-8">
-                        {/* I am a Web Developer */}
-                        I am a 
+                        {/* I am a Web Developer */}I am a
                         {/* <div className="inline ml-2 text-red-600">Web Developer</div> */}
                         <div className="inline ml-2 text-red-600">
-                        <Typewriter
-                        // className="text-red-600"
-                        onInit={(typewriter)=>{
-                          typewriter
-                          .typeString("Web Developer")
-                          .pauseFor(2000)
-                          .deleteAll()
-                          .typeString("Programmer")
-                          .pauseFor(2000)
-                          .deleteAll()
-                          .typeString("Your Buddy :) ")
-                          .pauseFor(2000)
-                          .deleteAll()
-                          .typeString("CSE Student")
-                          .pauseFor(2000)
-                          .deleteAll()
-                          .typeString("Active Learner")
-                          .pauseFor(2000)
-                          .deleteAll()
-                          .typeString("Web Developer")
-                          .pauseFor(2000)
-                          .start()
-                        }}
-                        /></div>
+                          <Typewriter
+                            // className="text-red-600"
+                            onInit={(typewriter) => {
+                              typewriter
+                                .typeString("Web Developer")
+                                .pauseFor(2000)
+                                .deleteAll()
+                                .typeString("Programmer")
+                                .pauseFor(2000)
+                                .deleteAll()
+                                .typeString("Your Buddy :) ")
+                                .pauseFor(2000)
+                                .deleteAll()
+                                .typeString("CSE Student")
+                                .pauseFor(2000)
+                                .deleteAll()
+                                .typeString("Active Learner")
+                                .pauseFor(2000)
+                                .deleteAll()
+                                .typeString("Web Developer")
+                                .pauseFor(2000)
+                                .start();
+                            }}
+                          />
+                        </div>
                       </div>
                       <p className="mt-4 font-Ubuntu leading-relaxed text-2xl text-red-700">
                         Creating beautiful things,

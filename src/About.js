@@ -54,7 +54,7 @@ export default function About() {
               {/* The bigger laptop screen part */}
               <section
                 id="aboutmyself"
-                className={`text-gray-600 ${dark.Darkval} body-font hidden md:block lg:block font-Rampart`}
+                className={`text-gray-600 ${dark.Darkval} pt-12 body-font hidden md:block lg:block font-Rampart`}
               >
                 {/* <div className="text-center m-10">
         <h1 className="title-font sm:text-4xl text-3xl mb-1 font-bold text-black underline underline-offset-[24px]">
@@ -90,9 +90,13 @@ export default function About() {
                     >
                       who i am
                     </p>
-                    <p className="mb-8 leading-relaxed">
+                    <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
                       Rishab Mandal, that's me. Born in Mumbai, I am a
-                      Full-Stack web developer and a UI/UX designer.
+                      Full-Stack Web Developer creating 
+                      websites for people who know that prioritizing projects leads to profits.
+                    </p>
+                    <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
+                      Because when you show up as your full self, you create space fpr your clients to do the same. And then everybody wins.
                     </p>
                     <div className="flex justify-center">
                       <button
@@ -169,9 +173,17 @@ export default function About() {
                     >
                       who i am
                     </p>
-                    <p className="mb-8 leading-relaxed">
+                    {/* <p className="mb-8 leading-relaxed">
                       Rishab Mandal, that's me. Born in Mumbai, I am a
                       Full-Stack Web developer and a UI/UX designer.
+                    </p> */}
+                    <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
+                      Rishab Mandal, that's me. Born in Mumbai, I am a
+                      Full-Stack Web Developer creating 
+                      websites for people who know that prioritizing projects leads to profits.
+                    </p>
+                    <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
+                      Because when you show up as your full self, you create space fpr your clients to do the same. And then everybody wins.
                     </p>
                     <div className="flex justify-center">
                       <button
@@ -236,25 +248,25 @@ export default function About() {
                 >
                   what i know
                 </p> */}
-                <ul class="steps steps-vertical">
+                <ul className="steps steps-vertical">
                   {/* <li class="step step-primary">Register</li>
                   <li class="step step-primary">Choose plan</li> */}
                   {/* <li class="step step-success">Purchase</li> */}
-                  <li class="step step-error text-red-600 text-left text-xl my-2">
+                  <li className="step step-error text-red-600 text-left text-xl my-2">
                     <div className="text-left mx-3 hover:scale-105 duration-500">
                       {" "}
                       BE in Computer Engineering <br />
                       Thadomal Shahani Engineering College
                     </div>
                   </li>
-                  <li class="step step-error text-red-600 text-left text-xl my-2">
+                  <li className="step step-error text-red-600 text-left text-xl my-2">
                     <div className="text-left mx-3 hover:scale-105 duration-500">
                       {" "}
                       HSC <br />
                       Swami Vivekanand Junior College
                     </div>
                   </li>
-                  <li class="step step-error text-red-600 text-left text-xl my-2">
+                  <li className="step step-error text-red-600 text-left text-xl my-2">
                     <div className="text-left mx-3 hover:scale-105 duration-500">
                       {" "}
                       SSC <br />
