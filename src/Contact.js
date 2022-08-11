@@ -33,7 +33,7 @@ export default function Contact() {
         {(dark) => {
           return (
             <>
-              <section id="contactme" className={`${dark.Darkval} h-[93vh] body-font`}>
+              <section id="contactme" className={`${dark.Darkval} md:h-[93vh] lg:h-[93vh] body-font`}>
                 <div className="container mx-auto flex px-5 py-5 md:py-24 lg:py-24 md:flex-row flex-col items-center">
                   <motion.div
                     initial={{ x: "-100vw" }}
