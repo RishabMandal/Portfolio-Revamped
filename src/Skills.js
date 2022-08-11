@@ -297,6 +297,7 @@ export default function Skills() {
                 {/* End of photos section */}
                 {/* FOOTER Section  */}
                 <footer className="text-gray-600 bg-red-600 body-font">
+                  <hr />
                   <div className="bg-black pb-20 md:pb-0 lg:pb-0">
                     <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                       <p className="text-red-600 text-sm text-center sm:text-left">

@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useEffect } from "react";
 import { darkmode } from "./App";
 // import gsap from "gsap";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import webimage from "./Webdesignimage.jpg";
 import downloadimage from "./download.png";
 import { useInView } from "react-intersection-observer";
@@ -92,11 +92,13 @@ export default function About() {
                     </p>
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
                       Rishab Mandal, that's me. Born in Mumbai, I am a
-                      Full-Stack Web Developer creating 
-                      websites for people who know that prioritizing projects leads to profits.
+                      Full-Stack Web Developer creating websites for people who
+                      know that prioritizing projects leads to profits.
                     </p>
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
-                      Because when you show up as your full self, you create space fpr your clients to do the same. And then everybody wins.
+                      Because when you show up as your full self, you create
+                      space fpr your clients to do the same. And then everybody
+                      wins.
                     </p>
                     <div className="flex justify-center">
                       <button
@@ -179,11 +181,13 @@ export default function About() {
                     </p> */}
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
                       Rishab Mandal, that's me. Born in Mumbai, I am a
-                      Full-Stack Web Developer creating 
-                      websites for people who know that prioritizing projects leads to profits.
+                      Full-Stack Web Developer creating websites for people who
+                      know that prioritizing projects leads to profits.
                     </p>
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
-                      Because when you show up as your full self, you create space fpr your clients to do the same. And then everybody wins.
+                      Because when you show up as your full self, you create
+                      space fpr your clients to do the same. And then everybody
+                      wins.
                     </p>
                     <div className="flex justify-center">
                       <button
@@ -219,27 +223,40 @@ export default function About() {
 
               {/* Try  */}
               {/* QUALIFICATION  */}
-              <div className={`${dark.Darkval}`}>
-              <motion.div
-                ref={ref}
-                // initial={{ x: "-100vw" }}
-                // animate={{ x: 0 }}
-                animate={animation}
-                className={` ${dark.Darkval} w-screen text-center px-5 py-24 items-center`}
-              >
-                {/* <h1
+              <AnimatePresence>
+                <div className={`${dark.Darkval}`}>
+                  <motion.div
+                    // ref={ref}
+                    // initial={{ x: "-100vw" }}
+                    // animate={{ x: 0 }}
+                    // animate={animation}
+                    initial={{ x: "-100%", opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    exit={{
+                      x: "-100%",
+                      opacity: 0,
+                      transition: { duration: 0, delay: 0 },
+                    }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.3,
+                      ease: "easeOut",
+                    }}
+                    className={` ${dark.Darkval} w-screen text-center px-5 py-24 items-center`}
+                  >
+                    {/* <h1
                   className={`title-font sm:text-4xl text-3xl mx-auto font-bold font-Ubuntu ${dark.Darkval} underline underline-offset-[24px]`}
                 >
                   Qualification
                   <br className="hidden lg:inline-block" />
                 </h1> */}
-                <h1
-                  className={`title-font sm:text-4xl text-3xl my-10 mx-auto font-bold font-Ubuntu ${dark.Darkval}`}
-                >
-                  Qualification
-                  <br className="hidden lg:inline-block" />
-                </h1>
-                {/* <p
+                    <h1
+                      className={`title-font sm:text-4xl text-3xl my-10 mx-auto font-bold font-Ubuntu ${dark.Darkval}`}
+                    >
+                      Qualification
+                      <br className="hidden lg:inline-block" />
+                    </h1>
+                    {/* <p
                   className={`mt-[0.20rem] md:mb-8 lg:mb-8 mb-20 font-Ubuntu leading-relaxed text-red-600 ${
                     dark.Darkval === "bg-white text-black"
                       ? "bg-white"
@@ -248,33 +265,32 @@ export default function About() {
                 >
                   what i know
                 </p> */}
-                <ul className="steps steps-vertical">
-                  {/* <li class="step step-primary">Register</li>
+                    <ul className="steps steps-vertical">
+                      {/* <li class="step step-primary">Register</li>
                   <li class="step step-primary">Choose plan</li> */}
-                  {/* <li class="step step-success">Purchase</li> */}
-                  <li className="step step-error text-red-600 text-left text-xl my-2">
-                    <div className="text-left mx-3 hover:scale-105 duration-500">
-                      {" "}
-                      BE in Computer Engineering <br />
-                      Thadomal Shahani Engineering College
-                    </div>
-                  </li>
-                  <li className="step step-error text-red-600 text-left text-xl my-2">
-                    <div className="text-left mx-3 hover:scale-105 duration-500">
-                      {" "}
-                      HSC <br />
-                      Swami Vivekanand Junior College
-                    </div>
-                  </li>
-                  <li className="step step-error text-red-600 text-left text-xl my-2">
-                    <div className="text-left mx-3 hover:scale-105 duration-500">
-                      {" "}
-                      SSC <br />
-                      St. Sebastian's High School
-                    </div>
-                  </li>
-                </ul>
-              </motion.div></div>
+                      {/* <li class="step step-success">Purchase</li> */}
+                      <li className="step step-error text-red-600 text-left text-xl my-2">
+                        <div className="text-left mx-3 hover:scale-105 duration-500">
+                          BE in Computer Engineering <br />
+                          Thadomal Shahani Engineering College
+                        </div>
+                      </li>
+                      <li className="step step-error text-red-600 text-left text-xl my-2">
+                        <div className="text-left mx-3 hover:scale-105 duration-500">
+                          HSC <br />
+                          Swami Vivekanand Junior College
+                        </div>
+                      </li>
+                      <li className="step step-error text-red-600 text-left text-xl my-2">
+                        <div className="text-left mx-3 hover:scale-105 duration-500">
+                          SSC <br />
+                          St. Sebastian's High School
+                        </div>
+                      </li>
+                    </ul>
+                  </motion.div>
+                </div>
+              </AnimatePresence>
               {/* // */}
 
               {/* // */}
