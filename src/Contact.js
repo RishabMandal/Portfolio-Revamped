@@ -58,10 +58,10 @@ export default function Contact() {
                     >
                       get in touch
                     </p>
-                    <p className="mb-8 leading-relaxed font-Ubuntu text-lg">
+                    <p className="mb-4 mt-2 leading-relaxed font-Ubuntu text-lg">
                       Wow Still here ?! Let's Collab ...
                     </p>
-                    <h1 className="title-font sm:text-xl text-xl mb-4 font-medium">
+                    {/* <h1 className="title-font sm:text-xl text-xl mb-4 font-medium">
                       Name <br /> Rishab Mandal
                     </h1>
                     <h1 className="title-font sm:text-xl text-xl mb-4 font-medium">
@@ -70,7 +70,11 @@ export default function Contact() {
                     </h1>
                     <h1 className="title-font sm:text-xl text-xl mb-4 font-medium">
                       Email <br /> rishab829@gmail.com
-                    </h1>
+                    </h1> */}
+                    <h1 className="title-font sm:text-xl text-xl mb-4 flex font-medium">
+                      Feel free to send an email on
+                      <div className="ml-2 text-red-700">rishab829@gmail.com</div> 
+                    </h1> 
                     <div className="flex justify-center"></div>
                   </motion.div>
                   <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -145,7 +149,7 @@ export default function Contact() {
               <footer className="text-gray-600 bg-red-600 body-font">
                 <div className="bg-black pb-20 md:pb-0 lg:pb-0">
                   <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                    <p className="text-red-600 text-sm text-center sm:text-left">
+                    <p className="text-red-600 text-sm text-center font-Ubuntu sm:text-left">
                       © 2022 Rishab —
                       <a
                         href="https://github.com/RishabMandal"

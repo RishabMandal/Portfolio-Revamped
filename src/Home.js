@@ -222,7 +222,7 @@ export default function Home() {
               <footer className="text-gray-600 bg-red-600 body-font">
                 <div className="bg-black pb-20 md:pb-0 lg:pb-0">
                   <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                    <p className="text-red-600 text-sm text-center sm:text-left">
+                    <p className="text-red-600 font-Ubuntu text-sm text-center sm:text-left">
                       © 2022 Rishab —
                       <a
                         href="https://github.com/RishabMandal"

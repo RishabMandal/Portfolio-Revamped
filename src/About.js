@@ -91,7 +91,7 @@ export default function About() {
                       who i am
                     </p>
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
-                      Rishab Mandal, that's me. Born in Mumbai, I am a
+                      Rishab Mandal, that's me. Born in India, I am a
                       Full-Stack Web Developer creating websites for people who
                       know that prioritizing projects leads to profits.
                     </p>
@@ -180,7 +180,7 @@ export default function About() {
                       Full-Stack Web developer and a UI/UX designer.
                     </p> */}
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
-                      Rishab Mandal, that's me. Born in Mumbai, I am a
+                      Rishab Mandal, that's me. Born in India, I am a
                       Full-Stack Web Developer creating websites for people who
                       know that prioritizing projects leads to profits.
                     </p>
@@ -301,7 +301,7 @@ export default function About() {
               <footer className="text-gray-600 bg-red-600 body-font">
                 <div className="bg-black pb-20 md:pb-0 lg:pb-0">
                   <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                    <p className="text-red-600 text-sm text-center sm:text-left">
+                    <p className="text-red-600 font-Ubuntu text-sm text-center sm:text-left">
                       © 2022 Rishab —
                       <a
                         href="https://github.com/RishabMandal"

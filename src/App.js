@@ -56,7 +56,7 @@ function App() {
     setTimeout(() => {
       setLoadingscreen("hidden");
       setContentscreen("");
-    }, 2000);
+    }, 1700);
   
   }, [])
   
@@ -64,7 +64,7 @@ function App() {
   return (
     <>
       <div className={`${loadingscreen} justify-end py-20 bg-black`}>
-        <div className="block mx-[30vw] md:mx-[45vw] mt-[30vh]">
+        {/* <div className="block mx-[30vw] md:mx-[45vw] mt-[30vh]">
           <Puff
             height="180"
             width="180"
@@ -74,7 +74,7 @@ function App() {
             // wrapperStyle
             // wrapperClass
           />
-        </div>
+        </div> */}
       </div>
 
       <darkmode.Provider value={{ Darkval, setdarkval }}>
