@@ -19,7 +19,6 @@ import About from "./About";
 import Skills from "./Skills";
 import { motion } from "framer-motion";
 
-
 export default function Navbar() {
   const [hide, setHide] = useState("hidden");
   return (
@@ -35,10 +34,15 @@ export default function Navbar() {
                 >
                   <div className="container mx-auto font-Ubuntu flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <a className="flex title-font font-medium items-center mb-4 md:mb-0">
-                      <motion.span 
-                      whileHover={{ scale: 1.3 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                      className="ml-[-15px] font-bold text-xl text-red-700">
+                      <motion.span
+                        whileHover={{ scale: 1.3 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                        className="ml-[-15px] font-bold text-xl text-red-700"
+                      >
                         Portfolio
                       </motion.span>
                     </a>
@@ -86,15 +90,19 @@ export default function Navbar() {
                     </nav>
                     <motion.button className="inline-flex items-center px-3 focus:outline-none rounded text-base md:mt-0">
                       {/* Dark Mode */}
-                      
-    
+
                       <motion.img
                         whileHover={{ scale: 1.2 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
                         src={moon3}
                         alt=""
                         className="w-6"
                         onClick={() => {
+                          navigator.vibrate(50);
                           if (dark.Darkval === "bg-white text-black") {
                             dark.setdarkval("bg-black text-white");
                           } else {
@@ -127,6 +135,7 @@ export default function Navbar() {
                         alt=""
                         className="w-6"
                         onClick={() => {
+                          navigator.vibrate(50);
                           if (hide === "hidden") {
                             setHide("");
                             // setHide2("hidden");
@@ -143,6 +152,7 @@ export default function Navbar() {
                         alt=""
                         className={`w-6 ${dark.Darkval}`}
                         onClick={() => {
+                          navigator.vibrate(50);
                           if (dark.Darkval === "bg-white text-black") {
                             dark.setdarkval("bg-black text-white");
                           } else {
@@ -210,6 +220,7 @@ export default function Navbar() {
                             alt=""
                             className="w-6"
                             onClick={() => {
+                              navigator.vibrate(50);
                               setHide("hidden");
                             }}
                           />

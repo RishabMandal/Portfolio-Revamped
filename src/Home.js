@@ -96,6 +96,7 @@ export default function Home() {
                 <div className="flex">
                   <button
                     onClick={() => {
+                      navigator.vibrate(50);
                       window.location.href =
                         "https://rishabmandal.github.io/Portfolio-Revamped/#/Contact";
                     }}

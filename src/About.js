@@ -1,10 +1,136 @@
-import React, { useContext, useRef, useEffect } from "react";
+import React, { useContext, useRef, useEffect, useState } from "react";
 import { darkmode } from "./App";
 // import gsap from "gsap";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import webimage from "./Webdesignimage.jpg";
 import downloadimage from "./download.png";
+import ReactImg from "./react.png";
+import HTML from "./html.png";
+import CSS from "./css.png";
+import JavaScript from "./javascript.png";
+import GitHub from "./github.png";
+import Tailwind from "./tailwind.png";
+import { TextureLoader } from "three/src/loaders/TextureLoader.js";
 import { useInView } from "react-intersection-observer";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { OrbitControls, useTexture } from "@react-three/drei";
+
+// My animation try, Beware
+function Box(props) {
+  // This reference gives us direct access to the THREE.Mesh object
+  const ref = useRef();
+  // Hold state for hovered and clicked events
+  const [hovered, hover] = useState(false);
+  const [clicked, click] = useState(false);
+
+  // const texture = useTexture({
+  //   // metalnessMap: url1,
+  //   // map: url2,
+  //   // map: 'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350',
+  //   // map: './Webdesignimage.jpg',
+  //   webimage,
+  //   downloadimage,
+  // });
+
+  const texture1 = useLoader(TextureLoader, Tailwind);
+  const texture2 = useLoader(TextureLoader, ReactImg);
+  const texture3 = useLoader(TextureLoader, HTML);
+  const texture4 = useLoader(TextureLoader, CSS);
+  const texture5 = useLoader(TextureLoader, JavaScript);
+  const texture6 = useLoader(TextureLoader, GitHub);
+  // const texture1 = useTexture(webimage);
+  // const texture2 = useTexture(ReactImg);
+  // const texture3 = useTexture(CSS);
+  // const texture4 = useTexture(HTML);
+  // const texture5 = useTexture(JavaScript);
+  // const texture6 = useTexture(GitHub);
+
+  // Subscribe this component to the render-loop, rotate the mesh every frame
+  useFrame(
+    (state, delta) =>
+      (ref.current.rotation.x =
+        ref.current.rotation.y =
+        ref.current.rotation.z +=
+          0.01)
+  );
+  // Return the view, these are regular Threejs elements expressed in JSX
+  return (
+    <mesh
+      // {...propsii}
+      // map={propsii}
+      {...props}
+      ref={ref}
+      // scale={clicked ? 1.5 : 1}
+      onClick={(event) => click(!clicked)}
+      onPointerOver={(event) => hover(true)}
+      onPointerOut={(event) => hover(false)}
+    >
+      <OrbitControls />
+      <boxBufferGeometry args={[2.5, 2.5, 2.5]} />
+      {/* <meshStandardMaterial
+        attachArray="material"
+        map={texture1}
+        color={hovered ? "green" : "white"}
+      />
+      <meshStandardMaterial
+        attachArray="material"
+        map={texture2}
+        color={hovered ? "green" : "white"}
+      />
+      <meshStandardMaterial
+        attachArray="material"
+        map={texture3}
+        color={hovered ? "green" : "white"}
+      />
+      <meshStandardMaterial
+        attachArray="material"
+        map={texture4}
+        color={hovered ? "green" : "white"}
+      />
+      <meshStandardMaterial
+        attachArray="material"
+        map={texture5}
+        color={hovered ? "green" : "white"}
+      />
+      <meshStandardMaterial
+        attachArray="material-1"
+        map={texture6}
+        color={hovered ? "green" : "red"}
+      /> */}
+      <meshStandardMaterial
+        attach="material-0"
+        map={texture1}
+        color={hovered ? "" : "white"}
+      />
+      <meshStandardMaterial
+        attach="material-1"
+        map={texture2}
+        color={hovered ? "" : ""}
+      />
+      <meshStandardMaterial
+        attach="material-2"
+        map={texture3}
+        color={hovered ? "" : ""}
+      />
+      <meshStandardMaterial
+        attach="material-3"
+        map={texture4}
+        color={hovered ? "" : ""}
+      />
+      <meshStandardMaterial
+        attach="material-4"
+        map={texture5}
+        color={hovered ? "" : ""}
+      />
+      <meshStandardMaterial
+        attach="material-5"
+        map={texture6}
+        color={hovered ? "" : ""}
+      />
+    </mesh>
+  );
+}
+//
 
 export default function About() {
   function clickfacebook() {
@@ -52,19 +178,20 @@ export default function About() {
           return (
             <>
               {/* The bigger laptop screen part */}
+              {/* // */}
               <section
                 id="aboutmyself"
                 className={`text-gray-600 ${dark.Darkval} pt-12 body-font hidden md:block lg:block font-Rampart`}
               >
                 {/* <div className="text-center m-10">
-        <h1 className="title-font sm:text-4xl text-3xl mb-1 font-bold text-black underline underline-offset-[24px]">
-          About myself
-          <br className="hidden lg:inline-block" />
-        </h1>
-        <p className="mb-8 leading-relaxed text-red-600 bg-white px-2">
-          who i am
-        </p>
-      </div> */}
+                <h1 className="title-font sm:text-4xl text-3xl mb-1 font-bold text-black underline underline-offset-[24px]">
+               About myself
+               <br className="hidden lg:inline-block" />
+               </h1>
+               <p className="mb-8 leading-relaxed text-red-600 bg-white px-2">
+                who i am
+                 </p>
+                  </div> */}
                 <div
                   className={`container ${dark.Darkval} mx-auto flex px-5 py-24 md:flex-row flex-col items-center`}
                 >
@@ -72,7 +199,7 @@ export default function About() {
                     initial={{ x: "-100vw" }}
                     transition={{ duration: 0.7, type: "spring", bounce: 0.3 }}
                     animate={{ x: 0 }}
-                    className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-center md:text-left mb-16 md:mb-0 items-center text-center"
+                    className="lg:flex-grow md:w-1/2 lg:pr-10 lg:mt-[-150px] md:pr-8 flex flex-col md:items-center md:text-left mb-16 md:mb-0 items-center text-center"
                   >
                     <hr />
                     <h1
@@ -91,9 +218,9 @@ export default function About() {
                       who i am
                     </p>
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
-                      Rishab Mandal, that's me. Born in India, I am a
-                      Full-Stack Web Developer creating websites for people who
-                      know that prioritizing projects leads to profits.
+                      Rishab Mandal, that's me. Born in India, I am a Full-Stack
+                      Web Developer creating websites for people who know that
+                      prioritizing projects leads to profits.
                     </p>
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
                       Because when you show up as your full self, you create
@@ -126,13 +253,26 @@ export default function About() {
                       bounce: 0.3,
                     }}
                     animate={{ x: 0 }}
-                    className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+                    className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mt-[-150px]"
                   >
-                    <img
+                    {/* <img
                       className="object-cover object-center rounded-xl"
                       alt="hero"
                       src={webimage}
-                    />
+                    /> */}
+                    {/* My try for cube animation  */}
+                    <div>
+                      <Canvas>
+                        <ambientLight intensity={0.7} />
+                        <spotLight
+                          position={[10, 10, 10]}
+                          angle={0.15}
+                          penumbra={1}
+                        />
+                        <pointLight position={[-10, -10, -10]} />
+                        <Box position={[0, 0, 0]} />
+                      </Canvas>
+                    </div>
                   </motion.div>
                 </div>
               </section>
@@ -180,9 +320,9 @@ export default function About() {
                       Full-Stack Web developer and a UI/UX designer.
                     </p> */}
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
-                      Rishab Mandal, that's me. Born in India, I am a
-                      Full-Stack Web Developer creating websites for people who
-                      know that prioritizing projects leads to profits.
+                      Rishab Mandal, that's me. Born in India, I am a Full-Stack
+                      Web Developer creating websites for people who know that
+                      prioritizing projects leads to profits.
                     </p>
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
                       Because when you show up as your full self, you create
@@ -212,11 +352,23 @@ export default function About() {
                     // animate={{ x: 0,zIndex:0 }}
                     className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
                   >
-                    <img
+                    {/* <img
                       className="object-cover object-center rounded-xl"
                       alt="hero"
                       src={webimage}
-                    />
+                    /> */}
+                    <div>
+                      <Canvas>
+                        <ambientLight intensity={0.7} />
+                        <spotLight
+                          position={[10, 10, 10]}
+                          angle={0.15}
+                          penumbra={1}
+                        />
+                        <pointLight position={[-10, -10, -10]} />
+                        <Box position={[0, 0, 0]} />
+                      </Canvas>
+                    </div>
                   </motion.div>
                 </div>
               </section>
