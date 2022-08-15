@@ -41,7 +41,16 @@ export default function Skills() {
     }
   }
 
-  // Animation while scrolling
+  // Vibration, Haptic Feedback while scrolling
+  const { ref, inView } = useInView();
+  // const animation = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      navigator.vibrate(50);
+    }
+    if (!inView) {
+    }
+  }, [inView]);
 
   return (
     <>
@@ -257,6 +266,7 @@ export default function Skills() {
                         delay: 0.3,
                         ease: "easeOut",
                       }}
+                      ref={ref}
                       className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
                     >
                       <motion.img

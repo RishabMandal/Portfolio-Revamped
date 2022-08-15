@@ -2,7 +2,7 @@ import React, { useContext, useRef, useEffect, useState } from "react";
 import { darkmode } from "./App";
 // import gsap from "gsap";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
-import webimage from "./Webdesignimage.jpg";
+// import webimage from "./Webdesignimage.jpg";
 import downloadimage from "./download.png";
 import ReactImg from "./react.png";
 import HTML from "./html.png";
@@ -152,21 +152,22 @@ export default function About() {
     }
   }
 
-  // Animation while scrolling
+  // Vibration, Haptic Feedback while scrolling
   const { ref, inView } = useInView();
-  const animation = useAnimation();
+  // const animation = useAnimation();
   useEffect(() => {
     if (inView) {
-      animation.start({
-        x: 0,
-        transition: { type: "spring" },
-      });
+      navigator.vibrate(50);
+      // animation.start({
+      //   x: 0,
+      //   transition: { type: "spring" },
+      // });
     }
     if (!inView) {
-      animation.start({
-        x: "-100vw",
-        transition: { type: "spring" },
-      });
+      // animation.start({
+      //   x: "-100vw",
+      //   transition: { type: "spring" },
+      // });
     }
   }, [inView]);
 
@@ -224,7 +225,7 @@ export default function About() {
                     </p>
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
                       Because when you show up as your full self, you create
-                      space fpr your clients to do the same. And then everybody
+                      space for your clients to do the same. And then everybody
                       wins.
                     </p>
                     <div className="flex justify-center">
@@ -277,6 +278,8 @@ export default function About() {
                 </div>
               </section>
               {/* The smaller mobile screen part */}
+              {/* // */}
+              {/* // */}
               <section
                 id="aboutmyself"
                 className={`text-gray-600 ${dark.Darkval} md:hidden lg:hidden body-font font-Rampart`}
@@ -326,7 +329,7 @@ export default function About() {
                     </p>
                     <p className="mb-8 leading-relaxed text-lg font-Ubuntu">
                       Because when you show up as your full self, you create
-                      space fpr your clients to do the same. And then everybody
+                      space for your clients to do the same. And then everybody
                       wins.
                     </p>
                     <div className="flex justify-center">
@@ -336,6 +339,9 @@ export default function About() {
                             ? "hover:bg-white"
                             : "hover:bg-black"
                         } font-Ubuntu text-white hover:shadow-xl hover:shadow-red-600/40 bg-red-700 animate-bouncy hover:animate-none border-4 border-red-700 py-2 px-6 focus:outline-none hover:text-red-600 hover:border-4 hover:border-red-600 hover:rounded-xl rounded-xl`}
+                        onClick={()=>{
+                          navigator.vibrate(50);
+                        }}
                       >
                         Download CV
                       </button>
@@ -357,7 +363,13 @@ export default function About() {
                       alt="hero"
                       src={webimage}
                     /> */}
-                    <div>
+                    <div
+                      onClick={() => {
+                        navigator.vibrate([
+                          100, 50, 100, 75, 100, 100, 100, 150, 100, 200, 100,
+                        ]);
+                      }}
+                    >
                       <Canvas>
                         <ambientLight intensity={0.7} />
                         <spotLight
@@ -403,6 +415,7 @@ export default function About() {
                   <br className="hidden lg:inline-block" />
                 </h1> */}
                     <h1
+                      ref={ref}
                       className={`title-font sm:text-4xl text-3xl my-10 mx-auto font-bold font-Ubuntu ${dark.Darkval}`}
                     >
                       Qualification

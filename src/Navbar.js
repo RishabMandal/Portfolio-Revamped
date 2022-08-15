@@ -5,6 +5,7 @@ import React, { createContext, useState } from "react";
 import moon3 from "./moon3.png";
 import cross from "./cross.png";
 import menuicon from "./icons-circled-menu.png";
+import RM from "./RM.png"
 import {
   HashRouter as Router,
   Routes,
@@ -43,7 +44,8 @@ export default function Navbar() {
                         }}
                         className="ml-[-15px] font-bold text-xl text-red-700"
                       >
-                        Portfolio
+                        {/* Portfolio */}
+                        <img src={RM} alt="" />
                       </motion.span>
                     </a>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
@@ -163,7 +165,7 @@ export default function Navbar() {
                     </button>
                   </div>
 
-                  {/* New Navbar at the bottom (lower part) */}
+{/*                  New Navbar at the bottom (lower part) */}
 
                   <div
                     className={`md:hidden ${dark.Darkval} ${hide} bg-opacity-0 fixed bottom-3 w-screen lg:hidden text-left text-2xl pt-4`}
