@@ -1,28 +1,30 @@
 import { darkmode } from "./App";
 import React from "react";
 import { motion } from "framer-motion";
+import githubicon from "./githubicon3.png";
 
 export default function Contact() {
   function clickfacebook() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to facebook ? ")) {
       window.location.href = "https://www.facebook.com/rishab.mandal.1048";
     }
   }
   function clickinsta() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to Instagram ? ")) {
       window.location.href = "https://www.instagram.com/rishab829/";
     }
   }
   function clicklinkedin() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to Linkedin ? ")) {
-      window.location.href = "https://www.instagram.com/rishab829/";
+      window.location.href =
+        "https://www.linkedin.com/in/rishab-mandal-447479256/";
     }
   }
   function clickme() {
-    console.log("clicked");
+    // console.log("clicked");
     alert("Sending this message ....");
   }
 
@@ -33,7 +35,10 @@ export default function Contact() {
         {(dark) => {
           return (
             <>
-              <section id="contactme" className={`${dark.Darkval} md:h-[93vh] lg:h-[93vh] body-font`}>
+              <section
+                id="contactme"
+                className={`${dark.Darkval} md:h-[93vh] lg:h-[93vh] body-font`}
+              >
                 <div className="container mx-auto flex px-5 py-5 md:py-24 lg:py-24 md:flex-row flex-col items-center">
                   <motion.div
                     initial={{ x: "-100vw" }}
@@ -73,8 +78,10 @@ export default function Contact() {
                     </h1> */}
                     <h1 className="title-font sm:text-xl text-xl mb-4 flex font-medium">
                       Feel free to send an email on
-                      <div className="ml-2 text-red-700">rishab829@gmail.com</div> 
-                    </h1> 
+                      <div className="ml-2 text-red-700">
+                        rishab829@gmail.com
+                      </div>
+                    </h1>
                     <div className="flex justify-center"></div>
                   </motion.div>
                   <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -224,6 +231,19 @@ export default function Contact() {
                           ></path>
                           <circle cx="4" cy="4" r="2" stroke="none"></circle>
                         </svg>
+                      </a>
+                      <a className="ml-3 text-red-600 cursor-pointer">
+                        <img
+                          src={githubicon}
+                          onClick={() => {
+                            if (window.confirm("Proceed to GitHub ? ")) {
+                              window.location.href =
+                                "https://github.com/RishabMandal";
+                            }
+                          }}
+                          className="w-6 h-6 -mt-1"
+                          alt=""
+                        />
                       </a>
                     </span>
                   </div>

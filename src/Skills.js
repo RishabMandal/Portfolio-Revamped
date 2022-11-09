@@ -1,6 +1,6 @@
 import { darkmode } from "./App";
 import React, { useEffect } from "react";
-import languageimage from "./languageimage.jpg";
+// import languageimage from "./languageimage.jpg";
 import projectimage1 from "./Picsart_22-08-10_21-49-15-590.png";
 // From here starts new portion
 import HTML from "./html.png";
@@ -20,24 +20,26 @@ import {
   useScroll,
 } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import githubicon from "./githubicon3.png";
 
 export default function Skills() {
   function clickfacebook() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to facebook ? ")) {
       window.location.href = "https://www.facebook.com/rishab.mandal.1048";
     }
   }
   function clickinsta() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to Instagram ? ")) {
       window.location.href = "https://www.instagram.com/rishab829/";
     }
   }
   function clicklinkedin() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to Linkedin ? ")) {
-      window.location.href = "https://www.instagram.com/rishab829/";
+      window.location.href =
+        "https://www.linkedin.com/in/rishab-mandal-447479256/";
     }
   }
 
@@ -72,8 +74,8 @@ export default function Skills() {
                       <p className="leading-relaxed text-base font-Ubuntu">
                         Website and webpage development, Basic android
                         application development through Android Studio, Video
-                        editing, Photoshop and photo editing, C, Java, React JS, Node JS,
-                        Express JS, MongoDB.
+                        editing, Photoshop and photo editing, C, Java, React JS,
+                        Node JS, Express JS, MongoDB.
                       </p>
                       <div className="flex md:mt-4 mt-6">
                         <a className="text-red-600 inline-flex items-center cursor-pointer ">
@@ -164,7 +166,7 @@ export default function Skills() {
                             src={HTML}
                             alt="HTML icon"
                           />
-                          <p className="my-4">HTML</p>
+                          <p className="my-4 font-Ubuntu">HTML</p>
                         </div>
                         <div className="  hover:scale-110 duration-500">
                           <img
@@ -172,7 +174,7 @@ export default function Skills() {
                             src={CSS}
                             alt="HTML icon"
                           />
-                          <p className="my-4">CSS</p>
+                          <p className="my-4 font-Ubuntu">CSS</p>
                         </div>
                         <div className="  hover:scale-110 duration-500">
                           <img
@@ -180,7 +182,7 @@ export default function Skills() {
                             src={JavaScript}
                             alt="HTML icon"
                           />
-                          <p className="my-4">JAVASCRIPT</p>
+                          <p className="my-4 font-Ubuntu">JAVASCRIPT</p>
                         </div>
                         <div className="  hover:scale-110 duration-500">
                           <img
@@ -188,7 +190,7 @@ export default function Skills() {
                             src={ReactImg}
                             alt="HTML icon"
                           />
-                          <p className="my-4">REACT</p>
+                          <p className="my-4 font-Ubuntu">REACT</p>
                         </div>
                         <div className="  hover:scale-110 duration-500">
                           <img
@@ -196,7 +198,7 @@ export default function Skills() {
                             src={GitHub}
                             alt="HTML icon"
                           />
-                          <p className="my-4">GITHUB</p>
+                          <p className="my-4 font-Ubuntu">GITHUB</p>
                         </div>
                         <div className="  hover:scale-110 duration-500">
                           <img
@@ -204,7 +206,7 @@ export default function Skills() {
                             src={Node}
                             alt="HTML icon"
                           />
-                          <p className="my-4">NODE JS</p>
+                          <p className="my-4 font-Ubuntu">NODE JS</p>
                         </div>
                         <div className="  hover:scale-110 duration-500">
                           <img
@@ -212,7 +214,7 @@ export default function Skills() {
                             src={Mongo}
                             alt="HTML icon"
                           />
-                          <p className="my-4">MONGO DB</p>
+                          <p className="my-4 font-Ubuntu">MONGO DB</p>
                         </div>
                         <div className="  hover:scale-110 duration-500">
                           <img
@@ -220,7 +222,7 @@ export default function Skills() {
                             src={Tailwind}
                             alt="HTML icon"
                           />
-                          <p className="my-4">TAILWIND</p>
+                          <p className="my-4 font-Ubuntu">TAILWIND</p>
                         </div>
                       </div>
                     </div>
@@ -385,6 +387,19 @@ export default function Skills() {
                             ></path>
                             <circle cx="4" cy="4" r="2" stroke="none"></circle>
                           </svg>
+                        </a>
+                        <a className="ml-3 text-red-600 cursor-pointer">
+                          <img
+                            src={githubicon}
+                            onClick={() => {
+                              if (window.confirm("Proceed to GitHub ? ")) {
+                                window.location.href =
+                                  "https://github.com/RishabMandal";
+                              }
+                            }}
+                            className="w-6 h-6 -mt-1"
+                            alt=""
+                          />
                         </a>
                       </span>
                     </div>

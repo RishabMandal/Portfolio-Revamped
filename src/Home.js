@@ -8,24 +8,26 @@ import { motion } from "framer-motion";
 // import { useInView } from "react-intersection-observer";
 // import { useEffect } from "react";
 import Typewriter from "typewriter-effect";
+import githubicon from "./githubicon3.png";
 
 export default function Home() {
   function clickfacebook() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to facebook ? ")) {
       window.location.href = "https://www.facebook.com/rishab.mandal.1048";
     }
   }
   function clickinsta() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to Instagram ? ")) {
       window.location.href = "https://www.instagram.com/rishab829/";
     }
   }
   function clicklinkedin() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to Linkedin ? ")) {
-      window.location.href = "https://www.instagram.com/rishab829/";
+      window.location.href =
+        "https://www.linkedin.com/in/rishab-mandal-447479256/";
     }
   }
   return (
@@ -111,7 +113,9 @@ export default function Home() {
                   <img src={arrow} alt="" className="h-5 w-5 my-auto mx-1" />
                 </div>
               </div>
-              <div className={`${dark.Darkval} h-[100vh] hidden md:block lg:block`}>
+              <div
+                className={`${dark.Darkval} h-[100vh] hidden md:block lg:block`}
+              >
                 <motion.section
                   // initial={{ x: "-100vw" }}
                   // transition={{ duration: 0.7 }}
@@ -298,6 +302,19 @@ export default function Home() {
                           ></path>
                           <circle cx="4" cy="4" r="2" stroke="none"></circle>
                         </svg>
+                      </a>
+                      <a className="ml-3 text-red-600 cursor-pointer">
+                        <img
+                          src={githubicon}
+                          onClick={() => {
+                            if (window.confirm("Proceed to GitHub ? ")) {
+                              window.location.href =
+                                "https://github.com/RishabMandal";
+                            }
+                          }}
+                          className="w-6 h-6 -mt-1"
+                          alt=""
+                        />
                       </a>
                     </span>
                   </div>

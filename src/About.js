@@ -14,6 +14,7 @@ import { TextureLoader } from "three/src/loaders/TextureLoader.js";
 import { useInView } from "react-intersection-observer";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls, useTexture } from "@react-three/drei";
+import githubicon from "./githubicon3.png";
 
 // My animation try, Beware
 function Box(props) {
@@ -134,21 +135,22 @@ function Box(props) {
 
 export default function About() {
   function clickfacebook() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to facebook ? ")) {
       window.location.href = "https://www.facebook.com/rishab.mandal.1048";
     }
   }
   function clickinsta() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to Instagram ? ")) {
       window.location.href = "https://www.instagram.com/rishab829/";
     }
   }
   function clicklinkedin() {
-    console.log("clicked");
+    // console.log("clicked");
     if (window.confirm("Proceed to Linkedin ? ")) {
-      window.location.href = "https://www.instagram.com/rishab829/";
+      window.location.href =
+        "https://www.linkedin.com/in/rishab-mandal-447479256/";
     }
   }
 
@@ -339,7 +341,7 @@ export default function About() {
                             ? "hover:bg-white"
                             : "hover:bg-black"
                         } font-Ubuntu text-white hover:shadow-xl hover:shadow-red-600/40 bg-red-700 animate-bouncy hover:animate-none border-4 border-red-700 py-2 px-6 focus:outline-none hover:text-red-600 hover:border-4 hover:border-red-600 hover:rounded-xl rounded-xl`}
-                        onClick={()=>{
+                        onClick={() => {
                           navigator.vibrate(50);
                         }}
                       >
@@ -541,6 +543,19 @@ export default function About() {
                           ></path>
                           <circle cx="4" cy="4" r="2" stroke="none"></circle>
                         </svg>
+                      </a>
+                      <a className="ml-3 text-red-600 cursor-pointer">
+                        <img
+                          src={githubicon}
+                          onClick={() => {
+                            if (window.confirm("Proceed to GitHub ? ")) {
+                              window.location.href =
+                                "https://github.com/RishabMandal";
+                            }
+                          }}
+                          className="w-6 h-6 -mt-1"
+                          alt=""
+                        />
                       </a>
                     </span>
                   </div>
