@@ -100,7 +100,7 @@ export default function Home() {
                     onClick={() => {
                       navigator.vibrate(50);
                       window.location.href =
-                        "https://rishabmandal.github.io/Portfolio-Revamped/#/Contact";
+                        "https://drive.google.com/file/d/1VlmVWmTcIVSAHyE6OcVj-QYgtRldUGep/view?usp=share_link";
                     }}
                     className={`bg-red-600 ml-8 my-8 hover:shadow-xl hover:shadow-red-600/40 hover:text-red-600 text-white border-2 ${
                       dark.Darkval === "bg-white text-black"
@@ -108,7 +108,7 @@ export default function Home() {
                         : "hover:bg-black"
                     } border-red-600 cursor-pointer rounded-xl px-5 py-1`}
                   >
-                    Contact Me
+                    Resume
                   </button>
                   <img src={arrow} alt="" className="h-5 w-5 my-auto mx-1" />
                 </div>
@@ -182,7 +182,7 @@ export default function Home() {
                         <button
                           onClick={() => {
                             window.location.href =
-                              "https://rishabmandal.github.io/Portfolio-Revamped/#/Contact";
+                              "https://drive.google.com/file/d/1VlmVWmTcIVSAHyE6OcVj-QYgtRldUGep/view?usp=share_link";
                           }}
                           className={`inline font-Ubuntu text-white ${
                             dark.Darkval === "bg-white text-black"
@@ -190,7 +190,7 @@ export default function Home() {
                               : "hover:bg-black"
                           } bg-red-700 py-2 px-6 focus:outline-none hover:text-red-600 hover:border-4 hover:bg-white hover:border-red-700 hover:shadow-xl hover:shadow-red-600/40 rounded-xl border-4 border-red-700`}
                         >
-                          Contact Me
+                          Resume
                         </button>
                         <img
                           src={arrow}
