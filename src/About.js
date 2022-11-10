@@ -150,7 +150,7 @@ export default function About() {
     // console.log("clicked");
     if (window.confirm("Proceed to Linkedin ? ")) {
       window.location.href =
-        "https://www.linkedin.com/in/rishab-mandal-447479256/";
+        "https://www.linkedin.com/in/RishabMandal";
     }
   }
 
