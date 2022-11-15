@@ -2,6 +2,8 @@ import { darkmode } from "./App";
 import React, { useEffect } from "react";
 // import languageimage from "./languageimage.jpg";
 import projectimage1 from "./Picsart_22-08-10_21-49-15-590.png";
+import projectimage2 from "./projectimage2.jpg";
+import projectimage3 from "./projectimage3.png";
 // From here starts new portion
 import HTML from "./html.png";
 import CSS from "./css.png";
@@ -38,8 +40,7 @@ export default function Skills() {
   function clicklinkedin() {
     // console.log("clicked");
     if (window.confirm("Proceed to Linkedin ? ")) {
-      window.location.href =
-        "https://www.linkedin.com/in/RishabMandal";
+      window.location.href = "https://www.linkedin.com/in/RishabMandal";
     }
   }
 
@@ -251,6 +252,7 @@ export default function Skills() {
                     my work
                   </p>
                 </div>
+                {/* 1st project  */}
                 <motion.section
                   className={`text-gray-600 ${dark.Darkval} body-font font-Rampart `}
                 >
@@ -302,6 +304,135 @@ export default function Skills() {
                       </h1>
                       <p className="mb-8 mt-2 leading-relaxed font-Ubuntu">
                         Made with HTML, CSS & Javascript, React JS.
+                      </p>
+                    </motion.div>
+                  </motion.div>
+                </motion.section>
+                {/* 2nd project  */}
+                <motion.section
+                  className={`text-gray-600 ${dark.Darkval} body-font font-Rampart `}
+                >
+                  <motion.div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                    <motion.div
+                      initial={{ x: "-100%", opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      exit={{
+                        x: "-100%",
+                        opacity: 0,
+                        transition: { duration: 0, delay: 0 },
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.3,
+                        ease: "easeOut",
+                      }}
+                      ref={ref}
+                      // className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
+                      className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
+                    >
+                      {/* <motion.img
+                        onClick={() => {
+                          window.location.href =
+                            "https://rishabmandal.github.io/Login-Page/";
+                        }}
+                        className="object-cover object-center rounded-xl cursor-pointer"
+                        alt="hero"
+                        src={projectimage2}
+                      /> */}
+                      <h1 className="font-Ubuntu sm:text-4xl text-3xl mb-4 text-red-600">
+                        Personal Password Manager
+                      </h1>
+                      <p className="mb-8 mt-2 leading-relaxed font-Ubuntu">
+                        Made with React JS, Tailwind CSS & Framer Motion.
+                      </p>
+                    </motion.div>
+                    <motion.div
+                      // ref={ref2}
+                      initial={{ x: "100%", opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      exit={{
+                        x: "100%",
+                        opacity: 0,
+                        transition: { duration: 0, delay: 0 },
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.6,
+                        ease: "easeOut",
+                      }}
+                      // className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
+                      className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
+                    >
+                      {/* <h1 className="font-Ubuntu sm:text-4xl text-3xl mb-4 text-red-600">
+                        Personal Password Manager
+                      </h1>
+                      <p className="mb-8 mt-2 leading-relaxed font-Ubuntu">
+                        Made with React JS, Tailwind CSS & Framer Motion.
+                      </p> */}
+                      <motion.img
+                        onClick={() => {
+                          window.location.href =
+                            "https://rishabmandal.github.io/Personal-Password-Manager/#";
+                        }}
+                        className="object-cover object-center rounded-xl cursor-pointer"
+                        alt="hero"
+                        src={projectimage2}
+                      />
+                    </motion.div>
+                  </motion.div>
+                </motion.section>
+                {/* 3rd project  */}
+                <motion.section
+                  className={`text-gray-600 ${dark.Darkval} body-font font-Rampart `}
+                >
+                  <motion.div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                    <motion.div
+                      initial={{ x: "-100%", opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      exit={{
+                        x: "-100%",
+                        opacity: 0,
+                        transition: { duration: 0, delay: 0 },
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.3,
+                        ease: "easeOut",
+                      }}
+                      ref={ref}
+                      className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
+                    >
+                      <motion.img
+                        onClick={() => {
+                          window.location.href =
+                            "https://rishabmandal.github.io/Hangman-Game/";
+                        }}
+                        className="object-cover object-center rounded-xl cursor-pointer"
+                        alt="hero"
+                        src={projectimage3}
+                      />
+                    </motion.div>
+                    <motion.div
+                      // ref={ref2}
+                      initial={{ x: "100%", opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      exit={{
+                        x: "100%",
+                        opacity: 0,
+                        transition: { duration: 0, delay: 0 },
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.6,
+                        ease: "easeOut",
+                      }}
+                      className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
+                    >
+                      <h1 className="font-Ubuntu sm:text-4xl text-3xl mb-4 text-red-600">
+                        Hangman Game
+                      </h1>
+                      <p className="mb-8 mt-2 leading-relaxed font-Ubuntu">
+                        Made with React JS & Tailwind CSS.
                       </p>
                     </motion.div>
                   </motion.div>
