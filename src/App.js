@@ -1,8 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-// import About from "./About";
 import "./App.css";
-// import Contact from "./Contact";
-// import Home from "./Home";
 import Navbar from "./Navbar";
 // import Portfolio from "./Portfolio";
 // import Qualification from "./Qualification";

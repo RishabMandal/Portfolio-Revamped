@@ -5,11 +5,10 @@ import React, { createContext, useState } from "react";
 import moon3 from "./moon3.png";
 import cross from "./cross.png";
 import menuicon from "./icons-circled-menu.png";
-import RM from "./RM.png"
+import RM from "./RM.png";
 import {
   HashRouter as Router,
   Routes,
-  Switch,
   Route,
   Link,
   NavLink,
@@ -34,20 +33,21 @@ export default function Navbar() {
                   className={`${dark.Darkval} z-10 fixed top-0 w-screen body-font hidden md:block lg:block`}
                 >
                   <div className="container mx-auto font-Ubuntu flex flex-wrap p-5 flex-col md:flex-row items-center">
-                    <a className="flex title-font font-medium items-center mb-4 md:mb-0">
-                      <motion.span
-                        whileHover={{ scale: 1.3 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 400,
-                          damping: 10,
-                        }}
-                        className="ml-[-15px] font-bold text-xl text-red-700"
-                      >
-                        {/* Portfolio */}
-                        <img src={RM} alt="" />
-                      </motion.span>
-                    </a>
+                    <NavLink to="/">
+                      <a className="flex title-font font-medium items-center mb-4 md:mb-0">
+                        <motion.span
+                          whileHover={{ scale: 1.3 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 400,
+                            damping: 10,
+                          }}
+                          className="ml-[-15px] font-bold text-xl text-red-700"
+                        >
+                          <img src={RM} alt="" />
+                        </motion.span>
+                      </a>
+                    </NavLink>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
                       <NavLink
                         className={({ isActive }) =>
@@ -114,8 +114,6 @@ export default function Navbar() {
                       />
                     </motion.button>
                   </div>
-                  {/* <hr />
-                  <hr /> */}
                 </motion.header>
 
                 {/* Smaller navbar upper part */}
@@ -132,7 +130,6 @@ export default function Navbar() {
                     <button className="inline-flex float-right mx-3 my-1 focus:outline-none hover:bg-gray-200 rounded text-base md:mt-0">
                       {/* Dark Mode */}
                       <img
-                        // src={moon2}
                         src={menuicon}
                         alt=""
                         className="w-6"
@@ -165,7 +162,7 @@ export default function Navbar() {
                     </button>
                   </div>
 
-{/*                  New Navbar at the bottom (lower part) */}
+                  {/*                  New Navbar at the bottom (lower part) */}
 
                   <div
                     className={`md:hidden ${dark.Darkval} ${hide} bg-opacity-0 fixed bottom-3 w-screen lg:hidden text-left text-2xl pt-4`}
@@ -237,7 +234,6 @@ export default function Navbar() {
                   <Route exact path="/About" element={<About />} />
                   <Route exact path="/Skills" element={<Skills />} />
                   <Route exact path="/Contact" element={<Contact />} />
-                  {/* <Route exact path="/weather" element={<Weather />} /> */}
                 </Routes>
               </Router>
             </>
