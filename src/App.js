@@ -1,10 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
-// import Portfolio from "./Portfolio";
-// import Qualification from "./Qualification";
-// import Skills from "./Skills";
-// import { Audio, Puff } from "react-loader-spinner";
 
 const darkmode = createContext();
 
@@ -79,24 +75,6 @@ function App() {
         <div className={`${contentscreen}`}>
           <Navbar />
         </div>
-        {/* <div>
-          <Home />
-        </div>
-        <div>
-          <About />
-        </div>
-        <div>
-          <Skills />
-        </div>
-        <div>
-          <Qualification /> // Put this in about
-        </div>
-        <div>
-          <Portfolio /> // Put this in about
-        </div>
-        <div>
-          <Contact />
-        </div> */}
       </darkmode.Provider>
     </>
   );
