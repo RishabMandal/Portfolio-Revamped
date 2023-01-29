@@ -1,7 +1,6 @@
-import React, { useContext, useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { darkmode } from "./App";
-// import gsap from "gsap";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import downloadimage from "./download.png";
 import ReactImg from "./react.png";
 import HTML from "./html.png";
@@ -118,25 +117,6 @@ function Box(props) {
 //
 
 export default function About() {
-  function clickfacebook() {
-    // console.log("clicked");
-    if (window.confirm("Proceed to facebook ? ")) {
-      window.location.href = "https://www.facebook.com/rishab.mandal.1048";
-    }
-  }
-  function clickinsta() {
-    // console.log("clicked");
-    if (window.confirm("Proceed to Instagram ? ")) {
-      window.location.href = "https://www.instagram.com/rishab829/";
-    }
-  }
-  function clicklinkedin() {
-    // console.log("clicked");
-    if (window.confirm("Proceed to Linkedin ? ")) {
-      window.location.href = "https://www.linkedin.com/in/RishabMandal";
-    }
-  }
-
   // Vibration, Haptic Feedback while scrolling
   const { ref, inView } = useInView();
   // const animation = useAnimation();
@@ -331,9 +311,14 @@ export default function About() {
                         Download CV
                       </button>
                       <img
+                        onClick={() => {
+                          navigator.vibrate(50);
+                          window.location.href =
+                            "https://drive.google.com/file/d/1VlmVWmTcIVSAHyE6OcVj-QYgtRldUGep/view?usp=share_link";
+                        }}
                         src={downloadimage}
                         alt=""
-                        className="w-8 h-8 my-auto mx-2"
+                        className="w-8 h-8 my-auto cursor-pointer mx-2"
                       />
                     </div>
                   </motion.div>
@@ -343,11 +328,6 @@ export default function About() {
                     // animate={{ x: 0,zIndex:0 }}
                     className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
                   >
-                    {/* <img
-                      className="object-cover object-center rounded-xl"
-                      alt="hero"
-                      src={webimage}
-                    /> */}
                     <div
                       onClick={() => {
                         navigator.vibrate([
@@ -370,15 +350,10 @@ export default function About() {
                 </div>
               </section>
 
-              {/* Try  */}
               {/* QUALIFICATION  */}
               <AnimatePresence>
                 <div className={`${dark.Darkval}`}>
                   <motion.div
-                    // ref={ref}
-                    // initial={{ x: "-100vw" }}
-                    // animate={{ x: 0 }}
-                    // animate={animation}
                     initial={{ x: "-100%", opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     exit={{
@@ -402,28 +377,40 @@ export default function About() {
                     </h1>
                     <div className="inline-block mx-auto text-left">
                       <div className="flex my-8 text-lg">
-                        <div className="bg-red-600 rounded-full px-3 py-1 h-fit font-semibold">3</div>
-                        <div className=" text-red-600 mx-4 hover:scale-110 transition ease-in">BE in Computer Engineering <p>Thadomal Shahani Engineering College</p></div>
+                        <div className="bg-red-600 rounded-full px-3 py-1 h-fit font-semibold">
+                          3
+                        </div>
+                        <div className=" text-red-600 mx-4 hover:scale-110 transition ease-in">
+                          BE in Computer Engineering{" "}
+                          <p>Thadomal Shahani Engineering College</p>
+                        </div>
                       </div>
                       <div className="flex my-8 text-lg">
-                        <div className="bg-red-600 rounded-full px-3 py-1 h-fit font-semibold">2</div>
-                        <div className=" text-red-600 mx-4 hover:scale-110 transition ease-in">HSC <p>Swami Vivekanand Junior College</p></div>
+                        <div className="bg-red-600 rounded-full px-3 py-1 h-fit font-semibold">
+                          2
+                        </div>
+                        <div className=" text-red-600 mx-4 hover:scale-110 transition ease-in">
+                          HSC <p>Swami Vivekanand Junior College</p>
+                        </div>
                       </div>
                       <div className="flex my-8 text-lg">
-                        <div className="bg-red-600 rounded-full px-3 py-1 h-fit font-semibold">1</div>
-                        <div className=" text-red-600 mx-4 hover:scale-110 transition ease-in">SSC <p>St. Sebastian's High School</p></div>
+                        <div className="bg-red-600 rounded-full px-3 py-1 h-fit font-semibold">
+                          1
+                        </div>
+                        <div className=" text-red-600 mx-4 hover:scale-110 transition ease-in">
+                          SSC <p>St. Sebastian's High School</p>
+                        </div>
                       </div>
                     </div>
                   </motion.div>
                 </div>
               </AnimatePresence>
-              {/* // */}
 
-              <hr className="bg-white"/>
+              <hr className="bg-white" />
 
               {/* FOOTER Section  */}
               <footer className="text-gray-600 bg-red-600 body-font">
-                <Footer/>
+                <Footer />
               </footer>
             </>
           );

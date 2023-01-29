@@ -17,9 +17,7 @@ import Tailwind from "./tailwind.png";
 import Mongo from "./mongo.png";
 import {
   motion,
-  useAnimation,
   AnimatePresence,
-  useScroll,
 } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Footer from "./components/Footer";

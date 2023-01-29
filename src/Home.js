@@ -4,7 +4,6 @@ import arrow from "./arrow.png";
 import Picsart_22_03_05_min from "./Picsart_22-03-05_17-17-22-574-min.png";
 import { motion } from "framer-motion";
 // import { useInView } from "react-intersection-observer";
-// import { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import Footer from "./components/Footer";
 

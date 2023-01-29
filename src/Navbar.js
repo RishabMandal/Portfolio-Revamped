@@ -1,5 +1,5 @@
 import { darkmode } from "./App";
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
 // import moon from "./darkmodemoon.jpg";
 // import moon2 from "./darkmodemoon2.jpg";
 import moon3 from "./moon3.png";
@@ -10,7 +10,6 @@ import {
   HashRouter as Router,
   Routes,
   Route,
-  Link,
   NavLink,
 } from "react-router-dom";
 import Contact from "./Contact";

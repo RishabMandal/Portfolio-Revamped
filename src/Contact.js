@@ -1,12 +1,10 @@
 import { darkmode } from "./App";
 import React from "react";
 import { motion } from "framer-motion";
-import githubicon from "./githubicon3.png";
 import Footer from "./components/Footer";
 
 export default function Contact() {
   function clickme() {
-    // console.log("clicked");
     alert("Sending this message ....");
   }
 
@@ -48,16 +46,6 @@ export default function Contact() {
                     <p className="mb-4 mt-2 leading-relaxed font-Ubuntu text-lg">
                       Wow Still here ?! Let's Collab ...
                     </p>
-                    {/* <h1 className="title-font sm:text-xl text-xl mb-4 font-medium">
-                      Name <br /> Rishab Mandal
-                    </h1>
-                    <h1 className="title-font sm:text-xl text-xl mb-4 font-medium">
-                      Address <br />
-                      Mumbai, Maharashtra
-                    </h1>
-                    <h1 className="title-font sm:text-xl text-xl mb-4 font-medium">
-                      Email <br /> rishab829@gmail.com
-                    </h1> */}
                     <h1 className="title-font sm:text-xl text-xl mb-4 flex flex-wrap font-medium">
                       Feel free to send an email on
                       <div className="lg:ml-2  text-red-700">
@@ -87,7 +75,7 @@ export default function Contact() {
                             id="full-name"
                             name="name"
                             placeholder="Name"
-                            className="w-full placeholder-gray-800 bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            className="w-full placeholder-gray-800 bg-white rounded border border-gray-300 focus:border-red-600 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                           />
                         </div>
                         <div className="mb-4">
@@ -96,7 +84,7 @@ export default function Contact() {
                             id="email"
                             name="email"
                             placeholder="Email"
-                            className="w-full placeholder-gray-800 bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            className="w-full placeholder-gray-800 bg-white rounded border border-gray-300 focus:border-red-600 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                           />
                         </div>
                         <div className="mb-4">
@@ -105,14 +93,14 @@ export default function Contact() {
                             id="text2"
                             name="message"
                             placeholder="Message.."
-                            className="w-full placeholder-gray-800 bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 mb-3 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            className="w-full placeholder-gray-800 bg-white rounded border border-gray-300 focus:border-red-600 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 mb-3 px-3 leading-8 transition-colors duration-200 ease-in-out"
                           />
                         </div>
                         <button
                           type="submit"
                           id="Sendmessage"
                           onClick={clickme}
-                          className="text-white bg-red-700 border-4 border-red-600 py-2 px-6 focus:outline-none hover:bg-white hover:text-red-600  hover:rounded-xl font-Ubuntu rounded-xl"
+                          className="text-white transition ease-in bg-red-700 border-4 border-red-600 py-2 px-6 focus:outline-none hover:bg-white hover:text-red-600 hover:rounded-xl font-Ubuntu rounded-xl"
                         >
                           Send message
                         </button>
